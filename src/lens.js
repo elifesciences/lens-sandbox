@@ -6,7 +6,6 @@ var LensController = require("./lens_controller");
 var Keyboard = require("substance-commander").Keyboard;
 var util = require("substance-util");
 var html = util.html;
-var Backbone = require("../lib/backbone");
 var DEFAULT_CONFIG = require("../config/config.json");
 
 // The Lens Application
@@ -15,6 +14,7 @@ var DEFAULT_CONFIG = require("../config/config.json");
 
 var Lens = function(config) {
   config = config || DEFAULT_CONFIG;
+  config.routes = require("../config/routes.json");
   Application.call(this, config);
 
   this.controller = new LensController(config);
@@ -24,49 +24,17 @@ Lens.Article = require("lens-article");
 Lens.Reader = require("lens-reader");
 Lens.Outline = require("lens-outline");
 
-
 Lens.Prototype = function() {
-
-  // Keyboard registration
-  // --------
-  // 
-  // TODO: discuss where this should be placed...
-  // e.g., could be an optional configuration for the session itself
-
-  this.initKeyboard = function() {
-    this.keyboard = new Keyboard(this.controller);
-
-    this.controller.on("state-changed", this.keyboard.stateChanged, this.keyboard);
-    this.keyboard.set('TRIGGER_PREFIX_COMBOS', true);
-
-    var keymap = require("../config/default.keymap.json");
-    this.keyboard.registerBindings(keymap);
-  };
 
   // Start listening to routes
   // --------
 
-  this.initRouter = function() {
-    this.router = new Backbone.Router();
-    var routes = require("../config/routes.json");
-
-    _.each(routes, function(route) {
-      this.router.route(route.route, route.name, _.bind(this.controller[route.command], this.controller));
-    }, this);
-
-    Backbone.history.start();
-  };
-
-  this.start = function() {
-    Application.prototype.start.call(this);
-
+  this.render = function() {
     this.view = this.controller.createView();
     this.$el.html(this.view.render().el);
-
-    this.initRouter();
-    this.initKeyboard();
-  };
+  }
 };
+
 
 
 Lens.Prototype.prototype = Application.prototype;
