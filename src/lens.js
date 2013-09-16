@@ -2,8 +2,7 @@
 
 var _ = require("underscore");
 var Application = require("substance-application");
-var LensController = require("./controllers/lens_controller");
-var LensView = require("./views/lens");
+var LensController = require("./lens_controller");
 var Keyboard = require("substance-commander").Keyboard;
 var util = require("substance-util");
 var html = util.html;

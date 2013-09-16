@@ -3,7 +3,7 @@
 var _ = require("underscore");
 var util = require("substance-util");
 var Controller = require("substance-application").Controller;
-var LensView = require("../views/lens");
+var LensView = require("./lens_view");
 var Test = require("substance-test");
 var Library = require("substance-library");
 var LibraryController = Library.Controller;
@@ -113,6 +113,35 @@ LensController.Prototype = function() {
     }).error(cb);
   };
 
+  // Update Hash fragment
+  // --------
+  // 
+
+  this.updatePath = function(state) {
+    var path = [this.state.collection, this.state.document];
+
+    path.push(state.context);
+
+    if (state.node) {
+      path.push(state.node);
+    } else {
+      path.push('all');
+    }
+
+    if (state.resource) {
+      path.push(state.resource);
+    }
+
+    if (state.fullscreen) {
+      path.push('fullscreen');
+    }
+
+    window.app.router.navigate(path.join('/'), {
+      trigger: false,
+      replace: false
+    });
+  };
+
   // Transitions
   // ===================================
 
@@ -127,8 +156,17 @@ LensController.Prototype = function() {
         console.log(err.stack);
         throw err;
       }
+
       that.reader = new ReaderController(doc, state);
-      that.updateState('reader');
+
+      // Trigger URL Fragment update on every state change
+      that.reader.on('state-changed', function() {
+        that.updatePath(that.reader.state);
+      });
+
+      that.modifyState({
+        context: 'reader'
+      });
     };
 
     // HACK: for activating the NLM importer ATM it is not possible
@@ -139,28 +177,21 @@ LensController.Prototype = function() {
     // prefering option2 as it is simpler to achieve...
 
     var record = this.__library.get(documentId);
-
     var match = _LOCALSTORE_MATCHER.exec(record.url);
 
     if (match) {
       var docId = match[1];
 
-      // try {
       var docData = JSON.parse(localStorage.getItem("localdoc"));
       var doc = Article.fromSnapshot(docData, {
           // chronicle: Chronicle.create()
         });
       _onDocumentLoad(null, doc);
-      // } catch (e) {
-      //   console.log(e);
-      // }  
-
     } else {
       $.get(record.url)
       .done(function(data) {
           var doc, err;
 
-          // try {
           // Determine type of resource
           var xml = $.isXMLDoc(data);
 
@@ -176,14 +207,9 @@ LensController.Prototype = function() {
           // Process JSON file
           } else {
             if(typeof data == 'string') data = $.parseJSON(data);
-            doc = Article.fromSnapshot(data, {
-              // chronicle: Chronicle.create()
-            });
+            doc = Article.fromSnapshot(data);
           }
           _onDocumentLoad(err, doc);  
-          // }catch (e) {
-          //   console.log(e);
-          // }
         })
       .fail(function(err) {
         console.error(err);
@@ -198,7 +224,12 @@ LensController.Prototype = function() {
       node: node,
       resource: resource,
       fullscreen: !!fullscreen,
-      collection: collectionId // TODO: get rid of the library dependency here
+    };
+
+    // Lens Controller state
+    this.state = {
+      collection: collectionId,
+      document: documentId,
     };
 
     if (collectionId === "lens" && documentId === "lens_article") {
@@ -215,14 +246,24 @@ LensController.Prototype = function() {
   };
 
   this.openLensArticle = function(state) {
-    console.log('opening lens article');
+    var that = this;
 
     var doc = Article.describe();
     this.reader = new ReaderController(doc, state);
+    that.reader = new ReaderController(doc, state);
+
+    // Trigger URL Fragment update on every state change
+    that.reader.on('state-changed', function() {
+      that.updatePath(that.reader.state);
+    });
+
     this.updateState('reader');
 
-    // _
-    // console.log('MEH', doc);
+    // Lens Controller state
+    this.state = {
+      collection: "lens",
+      document: "lens_article"
+    };
   };
 
   this.openLibrary = function(collectionId) {
@@ -267,13 +308,13 @@ LensController.Prototype = function() {
   this.getActiveControllers = function() {
     var result = [ ["sandbox", this] ];
 
-    var state = this.state;
+    var context = this.state.context;
 
-    if (state === "article") {
+    if (context === "article") {
       result = result.concat(this.article.getActiveControllers());
-    } else if (state === "library") {
+    } else if (context === "library") {
       result = result.concat(["library", this.library]);
-    } else if (state === "test_center") {
+    } else if (context === "test_center") {
       result.push(["test_center", this.testRunner]);
     }
     return result;

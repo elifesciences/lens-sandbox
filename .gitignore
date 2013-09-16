@@ -6,6 +6,9 @@ lib-cov
 *.out
 *.pid
 *.gz
+.DS_Store
+/node_modules/
+*.sublime-*
 
 pids
 logs

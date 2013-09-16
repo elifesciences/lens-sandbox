@@ -24,10 +24,6 @@ var LensView = function(controller) {
   $(document).on('ondragend', function () { return false; });
   $(document).on('drop', this.handleDroppedFile.bind(this));
 
-  // DOM events
-  // -----------
-
-  // this.$el.delegate(".open-document", "click", _.bind(this.convertDocument, this));
 };
 
 
