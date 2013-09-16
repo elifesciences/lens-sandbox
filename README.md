@@ -1,15 +1,5 @@
 # Lens
 
-```
-########################################################################################
-##### Disclaimer:
-#####
-##### You are looking at the 0.2.x series of Lens which is considered a work-in-progress
-##### 
-##### Use at your own risk! For a stable version check the `gh-pages` branch.
-########################################################################################
-```
-
 **eLife Lens** provides a novel way of looking at content on the web. It is designed to make life easier for researchers, reviewers, authors and readers. For example, have you tried to look at a figure in an online article, while at the same time trying to see what the author says about the figure, jumping all around the article, losing track of what you were looking for in the first place? The reason for this is that most online research articles are published in a fixed digital version of the original paper. With eLife Lens, we take full advantage of the internet’s flexibility.
 
 For a demo and more information see: http://lens.elifesciences.org
@@ -21,10 +11,19 @@ Lens is composed of some independent modules. Those are:
 - The [Lens Outline](http://github.com/elifesciences/lens-outline) is the visual document map we are using in Lens. It can be used independently.
 
 
+Prequisites:
 
-### Installing and contributing
+- Node.js >= 0.8.x
+- Pandoc 1.10.x (for on the fly document generation)
 
-For install instructions and how to contribute see the manual [here](https://github.com/elifesciences/lens-manual/blob/master/manual.md). 
+### Install and run locally
+
+    $ git clone http://github.com/elifesciences/lens-sandbox
+    $ cd lens-sandbox
+    $ substance --update
+    $ substance
+
+For for detailed install instructions and how to contribute see the manual [here](https://github.com/elifesciences/lens-manual/blob/master/manual.md).
 
 
 <!--### Forking
