@@ -18,7 +18,7 @@ Prequisites:
 
 ### Install and run locally
 
-    $ git clone http://github.com/elifesciences/lens-sandbox
+    $ git clone https://github.com/elifesciences/lens-sandbox
     $ cd lens-sandbox
     $ substance --update
     $ substance
