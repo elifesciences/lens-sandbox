@@ -106,7 +106,7 @@
       "branch": "0.2.x"
     },
     {
-      "repository": "https://github.com/elifesciences/lens.git",
+      "repository": "https://github.com/elifesciences/lens-sandbox.git",
       "folder": ".",
       "branch": "0.2.x"
     }
