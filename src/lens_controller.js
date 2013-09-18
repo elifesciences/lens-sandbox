@@ -7,8 +7,10 @@ var LensView = require("./lens_view");
 var Test = require("substance-test");
 var Library = require("substance-library");
 var LibraryController = Library.Controller;
+var LensArticle = require("lens-article");
+var Article = require("substance-article");
 var ReaderController = require("lens-reader").Controller;
-var Article = require("lens-article");
+
 // var Chronicle = require("substance-chronicle");
 var Converter = require("lens-converter");
 
@@ -149,6 +151,7 @@ LensController.Prototype = function() {
 
   var _open = function(state, documentId) {
 
+
     var that = this;
 
     var _onDocumentLoad = function(err, doc) {
@@ -183,9 +186,7 @@ LensController.Prototype = function() {
       var docId = match[1];
 
       var docData = JSON.parse(localStorage.getItem("localdoc"));
-      var doc = Article.fromSnapshot(docData, {
-          // chronicle: Chronicle.create()
-        });
+      var doc = LensArticle.fromSnapshot(docData, {});
       _onDocumentLoad(null, doc);
     } else {
       $.get(record.url)
@@ -207,7 +208,12 @@ LensController.Prototype = function() {
           // Process JSON file
           } else {
             if(typeof data == 'string') data = $.parseJSON(data);
-            doc = Article.fromSnapshot(data);
+            if (data.schema && data.schema[0] === "lens-article") {
+              doc = LensArticle.fromSnapshot(data);
+            } else {
+              doc = Article.fromSnapshot(data);
+            }
+            
           }
           _onDocumentLoad(err, doc);  
         })
@@ -248,9 +254,8 @@ LensController.Prototype = function() {
   this.openLensArticle = function(state) {
     var that = this;
 
-    var doc = Article.describe();
+    var doc = LensArticle.describe();
     this.reader = new ReaderController(doc, state);
-    that.reader = new ReaderController(doc, state);
 
     // Trigger URL Fragment update on every state change
     that.reader.on('state-changed', function() {

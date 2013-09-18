@@ -162,7 +162,7 @@ app.get('/data/:doc.json', function(req, res) {
       output.nodes.document.guid = docId;
 
       if (err) return res.send(500, err);
-      lensify(output);
+      // lensify(output);
       res.send(output);
     });
   } catch (err) {
