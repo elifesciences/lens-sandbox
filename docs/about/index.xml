@@ -63,16 +63,15 @@
   </front>
   <body>
       <p>eLife Lens provides a novel way of looking at content on the web. It is designed to make life easier for researchers, reviewers, authors and readers. For example, have you tried to look at a figure in an online article, while at the same time trying to see what the author says about the figure, jumping all around the article, losing track of what you were looking for in the first place? The reason for this is that most online research articles are published in a fixed digital version of the original paper. With eLife Lens, we take full advantage of the dynamic nature of HTML combined with javascript (<xref ref-type="fig" rid="video1">Video 1</xref>).
-
-        <media id="video1" content-type="glencoe play-in-place height-250 width-310" xlink:href="http://cdn.elifesciences.org/video/eLifeLensIntro2.mp4" mimetype="video" mime-subtype="avi">
-          <object-id pub-id-type="doi">10.7554/eLife.00116.004</object-id>
-          <label>Video 1</label>
-          <caption>
-          <title>Introducing eLife Lens.</title>
-            <p>Watch Ian Mulvany from eLife demonstrating Lens.</p>
-          </caption>
-        </media>
       </p>
+      <media id="video1" content-type="glencoe play-in-place height-250 width-310" xlink:href="http://cdn.elifesciences.org/video/eLifeLensIntro2.mp4" mimetype="video" mime-subtype="avi">
+        <object-id pub-id-type="doi">10.7554/eLife.00116.004</object-id>
+        <label>Video 1</label>
+        <caption>
+        <title>Introducing eLife Lens.</title>
+          <p>Watch Ian Mulvany from eLife demonstrating Lens.</p>
+        </caption>
+      </media>
     <sec id="s1" sec-type="motivation">
       <title>Motivation</title>
       <p>Working with digital documents has been difficult for the most part, because they come in presentation-centric formats, optimized for print and with the intent to have the same display across multiple devices. Ultimately, the display of these documents is preserved to allow the user to print the exact same document across any device. Content today, however, is no longer being printed out readily; instead, it is read on a variety of platforms spanning computers and mobile devices. The limitations presented by different screen sizes, the lack of tactile feedback that comes from flipping between pages and inability to purely focus on the author’s arguments are problems present in all disciplines.</p>
