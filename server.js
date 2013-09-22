@@ -61,6 +61,7 @@ app.use('/src', express.static('src'));
 app.use('/data', express.static('data'));
 app.use('/config', express.static('config'));
 app.use('/images', express.static('images'));
+app.use('/docs', express.static('docs'));
 
 app.get("/scripts*",
   function(req, res, next) {

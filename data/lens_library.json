@@ -9,7 +9,7 @@
             ], 
             "id": "01159", 
             "title": "How to switch a master switch"
-        }, 
+        },
         "00762": {
             "url": "https://s3.amazonaws.com/elife-cdn/elife-articles/00762/elife00762.xml", 
             "authors": [
@@ -3394,7 +3394,7 @@
           "title": "eLife Lens - A novel way of seeing content",
           "authors": ["Michael Aufreiter", "Ivan Grubisic", "Rebecca Close"],
           "type": "record",
-          "url": "/data/about.json"
+          "url": "/docs/about/index.xml"
         },
 
         "lorem_ipsum": {
