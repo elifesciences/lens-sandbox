@@ -114,8 +114,6 @@ function lensify(doc) {
     docNode.title = "The Lens Manual - A developers guide for Lens application development";
   } else if (docNode.title === "about") {
     docNode.title = "eLife Lens: A novel way of seeing content";
-  } else if (docNode.title === "substance_scientist") {
-    docNode.title = "Substance Scientist: A web-based editor component designed for academics";
   } else if (docNode.title === "lens_article") {
     docNode.title = "The anatomy of a Lens Article";
   }
@@ -164,10 +162,14 @@ app.get('/data/:doc.json', function(req, res) {
     converter.convert(inputData, 'markdown', 'substance', function(err, output) {
       output = output.toJSON();
       output.id = docId;
-      output.nodes.document.guid = docId;
 
+      output.nodes.document.guid = docId;
       if (err) return res.send(500, err);
+      
       // lensify(output);
+      console.log('writing file to "/data/'+docId+'.json"');
+      fs.writeFileSync(__dirname + "/data/"+docId+".json", JSON.stringify(output, null, '  '));
+
       res.send(output);
     });
   } catch (err) {

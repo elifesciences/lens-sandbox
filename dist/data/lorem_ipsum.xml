@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article SYSTEM "journalpub-oasis3.dtd">
+
+<!--
+ Lorem Ipsum Document for automated testing of the converter
+
+ Goal: Has every possible combination of tags our converter supports
+ If there's a new edge case we want to cover it has to be formalized here, and a test needs to be added.
+-->
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" article-type="research-article" dtd-version="3.0" xml:lang="EN">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="nlm-ta">elife</journal-id>
+
+      <journal-title-group>
+        <journal-title>Lorem</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">2050-084X</issn>
+      <publisher>
+        <publisher-name>Lorem Sciences Publications, Ltd</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id">lorem_ipsum</article-id>
+      <article-id pub-id-type="doi">10.7554/lorem.ipsum</article-id>
+
+      <title-group>
+        <article-title>Lorem Ipsum</article-title>
+      </title-group>
+
+      <pub-date pub-type="epub">
+        <day>16</day>
+        <month>07</month>
+        <year>2013</year>
+      </pub-date>
+
+      <!-- LB stores supplemental material nodes within article-meta -->
+      <supplementary-material id="SUP1" xlink:href="2013CC4897R-Sup.pdf">
+        <label>Additional material</label>
+        <media xlink:href="2013CC4897R-Sup.pdf"/>
+      </supplementary-material>
+
+    </article-meta>
+  </front>
+  <body>
+    <sec id="s2" sec-type="results">
+      <title>Results</title>
+      <sec id="s2-1">
+        <title>Section title level 2</title>
+        <p>Lorem <italic>ipsum</italic> dolor sit amet, consectetur <xref ref-type="fig" rid="fig1">Figure 1</xref> adipiscing elit. Cras vel accumsan lectus, id hendrerit magna. Donec vehicula dui quis ipsum tempor tincidunt. Quisque adipiscing, nibh at pulvinar feugiat, odio lectus eleifend <ext-link ext-link-type="uri" xlink:href="http://example.com/x.pdf" xmlns:xlink="http://www.w3.org/1999/xlink">felis</ext-link>.</p>
+        <p>Also see <xref ref-type="supplementary-material" rid="SD1-data">Supplementary file 1</xref>.<!--
+        --><fig id="fig1" position="float">
+            <object-id pub-id-type="doi">10.7554/eLife.00299.003</object-id>
+            <label>Figure 1.</label>
+            <caption>
+              <title>Multiple genes show both a transcriptional response to the vaccine and evidence of genetic regulation of gene expression (cis-acting eQTL) in both cohorts.</title>
+              <p><bold>Manhattan</bold> plots of the genotype-expression—log10 p-values across the genome for the discovery (inner circle) and validation (outer circle) cohorts. Each dot represents a SNP-transcript pair. Red dots indicate SNP-transcript pairs for which there is evidence of significant genotype-expression association (genotype p&lt;5 × 10<sup>−8</sup>) and evidence of a transcriptional response to the vaccine (day effect p&lt;0.05). The 78 genes that showed both properties in the two cohorts are shown in the outer margin.</p>
+              <p><bold>DOI:</bold> <ext-link ext-link-type="doi" xlink:href="10.7554/eLife.00299.003">http://dx.doi.org/10.7554/eLife.00299.003</ext-link></p>
+            </caption>
+            <graphic xlink:href="http://camanocommunity.net/wp-content/uploads/2012/11/calico.jpg" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </fig><!--
+          A Video
+          --><media content-type="glencoe play-in-place height-250 width-310" id="movie1" mime-subtype="mov" mimetype="video" xlink:href="elife00005m001.mov">
+            <object-id pub-id-type="doi">
+              10.7554/eLife.00005.013</object-id>
+            <label>Movie 1.</label>
+            <caption>
+              <title>Movement of GFP tag.</title>
+              <p><bold>DOI:</bold> <ext-link ext-link-type="doi" xlink:href="10.7554/eLife.00005.013">http://dx.doi.org/10.7554/eLife.00005.013</ext-link></p>
+            </caption>
+          </media><!--
+          Video that has a supplement in it
+          --><media content-type="glencoe play-in-place height-250 width-310" id="movie2" mime-subtype="mov" mimetype="video" xlink:href="elife00005m002.mov">
+            <object-id pub-id-type="doi">10.7554/eLife.00005.016</object-id>
+            <label>Movie 2.</label>
+            <caption>
+              <title>3D reconstruction of the human PRC2-AEBP2 complex.</title>
+              <p>Docking of crystal structure for EED and RbAp48 WD40s (PDB: 2QXV; 2YB8) are indicated respectively in green and red. Docking of crystal structures of homologue SANT, SET and Zn finger domains (PDB: 3HM5, 3H6L and 2VY5) are shown in blue and purple.</p>
+              <p><bold>DOI:</bold> <ext-link ext-link-type="doi" xlink:href="10.7554/eLife.00005.016">http://dx.doi.org/10.7554/eLife.00005.016</ext-link></p>
+              <p>
+                <supplementary-material id="movie2_source_code">
+                  <object-id pub-id-type="doi">10.7554/eLife.00005.017</object-id>
+                  <label>Movie 2—source code 1.</label>
+                  <caption>
+                    <p>Overall architecture of the PRC2 complex.</p>
+                    <p><bold>DOI:</bold> <ext-link ext-link-type="doi" xlink:href="10.7554/eLife.00005.017">http://dx.doi.org/10.7554/eLife.00005.017</ext-link></p>
+                  </caption>
+                  <media mime-subtype="wrl" mimetype="application" xlink:href="elife00005s001.wrl"/>
+                </supplementary-material>
+              </p>
+            </caption>
+          </media></p>
+        <p><list list-type="bullet">
+          <list-item>
+            <p>List item 1</p>
+          </list-item>
+          <list-item>
+            <p>List item 2</p>
+          </list-item>
+          <list-item>
+            <list list-type="bullet">
+              <list-item>
+                <p>List item 2.1</p>
+              </list-item>
+              <list-item>
+                <p>List item 2.2</p>
+              </list-item>
+            </list>
+          </list-item>
+          </list></p></sec>
+      <sec id="s2-2">
+        <title>More Results</title><!--
+      --><p><table-wrap id="tbl1" position="float">
+            <object-id pub-id-type="doi">
+              10.7554/eLife.00768.006</object-id>
+            <label>Table 1.</label>
+            <caption>
+              <p>Expression in miracidia and sporocysts of schistosome homologs of planarian neoblast-enriched transcripts, measured by RNAseq</p><!--
+            --><p>
+                <bold>DOI:</bold>
+                <ext-link ext-link-type="doi" xlink:href="10.7554/eLife.00768.006">http://dx.doi.org/10.7554/eLife.00768.006</ext-link></p>
+            </caption><table frame="hsides" rules="groups">
+              <thead>
+                <tr>
+                  <th>Gene name</th>
+                  <th>RPKM (miracidia)</th>
+                  <th>RPKM (sporocysts)</th>
+                  <th>Fold change</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <bold>
+                      <italic>vasa-like</italic>
+                    </bold>
+                    <italic>(vlg,</italic>
+                    <bold>Smp_068440</bold>, 154320, 033710)</td>
+                  <td>20.6/46.1/272.4</td>
+                  <td>98.5/79.2/423.1</td>
+                  <td>4.8/1.7/1.6</td>
+                </tr>
+                <tr>
+                  <td>
+                    <bold>
+                      <italic>polo kinase</italic>
+                    </bold>
+                    <bold>(Smp_009600)</bold>
+                  </td>
+                  <td>43.0</td>
+                  <td>149.5</td>
+                  <td>3.5</td>
+                </tr>
+              </tbody>
+            </table>
+            <table-wrap-foot>
+              <fn>
+                <p>Expression of genes in bold is confirmed in this study with qPCR or FISH.</p>
+              </fn>
+            </table-wrap-foot>
+          </table-wrap><!--
+      --></p><!--
+      --><p>Hi I am a paragraph.</p>
+      </sec>
+    </sec>
+  </body>
+
+  <back>
+    <!-- A supplement in the back section -->
+    <sec sec-type="supplementary-material">
+      <title>Additional files</title>
+      <supplementary-material id="SD1-data">
+        <object-id pub-id-type="doi">10.7554/eLife.00299.013</object-id>
+        <label>Supplementary file 1.</label>
+        <caption>
+          <title>Compilation of the tables and figures (XLS).</title>
+          <p>This is a static version of the <ext-link ext-link-type="uri" xlink:href="http://www.vaxgenomics.org/vaxgenomics/" xmlns:xlink="http://www.w3.org/1999/xlink"> Interactive Results Tool</ext-link>, which is also available to download from Zenodo (see major datasets).</p>
+          <p><bold>DOI:</bold> <ext-link ext-link-type="doi" xlink:href="10.7554/eLife.00299.013">http://dx.doi.org/10.7554/eLife.00299.013</ext-link></p>
+        </caption>
+        <!-- We provide two media entries here, since the NLM spec allows multiple media entries -->
+        <media mime-subtype="xlsx" mimetype="application" xlink:href="elife00299s001.xlsx"/>
+      </supplementary-material>
+    </sec>
+    <ref-list>
+      <title>References</title>
+    </ref-list>
+  </back>
+</article>

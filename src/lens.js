@@ -59,16 +59,16 @@ var Substance = {
 // --------
 // 
 
-require("lens-converter/tests");
+// require("lens-converter/tests");
 require("substance-application/tests");
-require("substance-converter/tests");
+// require("substance-converter/tests");
 require("substance-operator/tests");
 require("substance-chronicle/tests");
 require("substance-data/tests");
 require("substance-document/tests");
 // require("substance-article/tests");
 require("substance-store/tests");
-require("substance-surface/tests");
+// require("substance-surface/tests");
 
 Lens.Substance = Substance;
 
