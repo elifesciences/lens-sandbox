@@ -7,6 +7,7 @@ var LensView = require("./lens_view");
 var Test = require("substance-test");
 var Library = require("substance-library");
 var LibraryController = Library.Controller;
+var CollectionController = Library.Collection.Controller; // require("./collection_controller");
 var LensArticle = require("lens-article");
 var Article = require("substance-article");
 var ReaderController = require("lens-reader").Controller;
@@ -273,19 +274,19 @@ LensController.Prototype = function() {
     };
   };
 
-  this.openLibrary = function(collectionId) {
+
+  this.openCollection = function(collectionId) {
     var that = this;
 
     function open() {
       // Defaults to lens collection
       var state = {
-        collection: collectionId || that.__library.collections[0].id // "lens"
+        context: 'collection',
+        collection: collectionId
       };
 
-      that.library = new LibraryController(that.__library, state);
-      that.modifyState({
-        context: 'library'
-      });
+      that.collection = new CollectionController(that.__library.getCollection(collectionId), state);
+      that.modifyState(state);
     }
 
     // Ensure the library is loaded

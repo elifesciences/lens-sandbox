@@ -34,12 +34,12 @@
   },
   {
     "route": ":collection",
-    "name": "library",
-    "command": "openLibrary"
+    "name": "collection",
+    "command": "openCollection"
   },
   {
     "route": "",
-    "name": "library",
+    "name": "about",
     "command": "openAbout"
   },
   {

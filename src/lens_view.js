@@ -50,8 +50,10 @@ LensView.Prototype = function() {
   this.onContextChanged = function(context) {
     if (context === "reader") {
       this.openReader();
-    } else if (context === "library") {
-      this.openLibrary();
+    // } else if (context === "library") {
+    //   this.openLibrary();
+    } else if (context === "collection") {
+      this.openCollection();
     } else if (context === "test_center") {
       this.openTestCenter();
     } else {
@@ -82,18 +84,15 @@ LensView.Prototype = function() {
     console.log('converting..');
   };
 
-  // Open Library
+
+  // Open Collection
   // ----------
   //
 
-  this.openLibrary = function() {
-    // Application controller has a editor controller ready
-    // -> pass it to the editor view
-    // var view = new EditorView(this.controller.editor.view);
-    var view = this.controller.library.createView();
-    this.replaceMainView('library', view);
+  this.openCollection = function() {
+    var view = this.controller.collection.createView();
+    this.replaceMainView('collection', view);
   };
-
 
   // Open the reader view
   // ----------

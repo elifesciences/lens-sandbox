@@ -282,7 +282,7 @@ a.testsuite {
   display: none;
 }
 
-#container .library .collection {
+#container #main .collection {
   padding-top: 30px;
   left: 0px;
   width: 1000px;
