@@ -6,45 +6,7 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='styles/font-awesome.css' rel='stylesheet' type='text/css'/>
 
-    <link href="styles/lens.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <!-- Substance.TestCenter -->
-    <link href="lib/substance/substance-test/testcenter.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <!-- Library View Styles -->
-    <link href="lib/substance/substance-library/library.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <!-- TOC styles -->
-    <link href="lib/substance/substance-toc/toc.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <!-- Generic Surface Styles -->
-    <link href="lib/substance/substance-surface/styles/surface.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <!-- Lens.Article related styles -->
-    <link href="lib/substance/lens-article/article.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <link href="lib/substance/lens-article/nodes/cover/cover.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/node/node.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/text/text.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/supplement/supplement.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/paragraph/paragraph.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/heading/heading.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/list/list.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/formula/formula.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/codeblock/codeblock.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/citation/citation.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/figure/figure.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/image/image.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <link href="lib/substance/lens-article/nodes/table/table.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/video/video.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/caption/caption.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <link href="lib/substance/lens-article/nodes/person/person.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="lib/substance/lens-article/nodes/publication_info/publication_info.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <!-- Lens.Outline styles -->
-    <link href="lib/substance/lens-outline/outline.css" media="screen" rel="stylesheet" type="text/css" />
+    #####styles#####
 
     <!-- Templates -->
     <script type="text/html" name="lens">
@@ -66,12 +28,12 @@
           <a href="#examples" class="toggle-view examples">Examples</a>
           <a href="#lens/lens_article" class="toggle-view lens-article">Lens.Article</a>
           <a href="#lens/manual" class="toggle-view manual">Manual</a>
+          <a href="#tests" class="toggle-view tests">Testsuite</a>
         </div>
 
         <div class="actions">
         </div>
       </div>
-
 
       <div class="loading" style="display: none;"></div>
 
@@ -88,17 +50,19 @@
 
     <!-- MathJax -->
     <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      "HTML-CSS": { linebreaks: { automatic: true } },
-             SVG: { linebreaks: { automatic: true } }
-    });
+      MathJax.Hub.Config({
+        "HTML-CSS": { linebreaks: { automatic: true } },
+               SVG: { linebreaks: { automatic: true } }
+      });
     </script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     #####scripts#####
 
     <script>
-      var Lens = require("/src/lens.js");
+      if (window.Lens === undefined) {
+        window.Lens = require("/src/lens.js");
+      }
 
       // Create a new Lens app instance
       // --------

@@ -18,12 +18,11 @@ var LensView = function(controller) {
   // Handle state transitions
   // --------
   
-  this.listenTo(this.controller, 'state-changed', this.onStateChanged);
+  this.listenTo(this.controller, 'context-changed', this.onContextChanged);
 
   $(document).on('dragover', function () { return false; });
   $(document).on('ondragend', function () { return false; });
   $(document).on('drop', this.handleDroppedFile.bind(this));
-
 };
 
 
@@ -48,15 +47,15 @@ LensView.Prototype = function() {
   // ==========================================================================
   //
 
-  this.onStateChanged = function(newState, oldState, options) {
-    if (newState === "reader") {
+  this.onContextChanged = function(context) {
+    if (context === "reader") {
       this.openReader();
-    } else if (newState === "library") {
-      this.openLibrary(options);
-    } else if (newState === "test_center") {
-      this.openTestCenter(options);
+    } else if (context === "library") {
+      this.openLibrary();
+    } else if (context === "test_center") {
+      this.openTestCenter();
     } else {
-      console.log("Unknown application state: " + newState);
+      console.log("Unknown application state: " + context);
     }
 
     this.updateMenu();
@@ -72,6 +71,8 @@ LensView.Prototype = function() {
       this.$('.toggle-view.lens-article').addClass('active');
     } else if (hash.match(/manual/)) {
       this.$('.toggle-view.manual').addClass('active');
+    } else if (hash.match(/tests/)) {
+      this.$('.toggle-view.tests').addClass('active');
     } else {
       this.$('.toggle-view.about').addClass('active');
     }
@@ -111,10 +112,8 @@ LensView.Prototype = function() {
   // ----------
   //
 
-  this.openTestCenter = function(options) {
-    // TODO: can this be improved? does TestCenter really need a router?
-    var view = new TestCenter(this.controller.testRunner, options);
-    // var view = new TestCenter(this.controller.testRunner, this.controller.router, options);
+  this.openTestCenter = function() {
+    var view = new TestCenter(this.controller.testRunner, this.controller.state);
     this.replaceMainView('test_center', view);
   };
 

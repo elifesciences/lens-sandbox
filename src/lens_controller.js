@@ -262,7 +262,9 @@ LensController.Prototype = function() {
       that.updatePath(that.reader.state);
     });
 
-    this.updateState('reader');
+    this.modifyState({
+      context: 'reader'
+    });
 
     // Lens Controller state
     this.state = {
@@ -281,7 +283,9 @@ LensController.Prototype = function() {
       };
 
       that.library = new LibraryController(that.__library, state);
-      that.updateState('library');
+      that.modifyState({
+        context: 'library'
+      });
     }
 
     // Ensure the library is loaded
@@ -291,7 +295,10 @@ LensController.Prototype = function() {
   // Test control center
   this.openTestCenter = function(suite) {
     this.testRunner = new Test.Runner();
-    this.updateState('test_center', {report: suite});
+    this.modifyState({
+      context: 'test_center',
+      report: suite
+    });
 
     // TODO: Run all suites instead of just choosing a default
     this.runSuite(suite);
