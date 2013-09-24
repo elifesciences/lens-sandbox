@@ -282,7 +282,7 @@ a.testsuite {
   display: none;
 }
 
-#container .library .collection {
+#container #main .collection {
   padding-top: 30px;
   left: 0px;
   width: 1000px;
@@ -579,7 +579,6 @@ TOC
   line-height: 20px;
   width: 44%;
   font-size: 14px;
-  background: #F5F5F5;
   height: 100%;
   position: relative;
   /*overflow: hidden;*/
@@ -594,7 +593,7 @@ TOC
 .article .resources .nodes > .content-node {
   color: #333;
   position: relative;
-  background: #EBEBEB;
+  background: rgba(0,0,0,0.05);
   margin-bottom: 30px;
   margin-right: 20px;
   padding: 0px;
@@ -1044,18 +1043,18 @@ span.annotation.formula_reference, span.publication_reference {
   width: 300px;
 }
 
-.library .toggle-collection {
+.library .collection {
   font-family: 'Avenir LT W01 85 Heavy', 'Montserrat', 'Source Sans Pro';
   font-size: 16px;
   display: block;
   padding: 20px 10px;
 }
 
-.library .toggle-collection:hover {
+.library .collection:hover {
   background: rgba(255,255,255,0.6);
 }
 
-.library .toggle-collection.active {
+.library .collection.active {
   background: #fff;
 }
 
@@ -1066,8 +1065,9 @@ span.annotation.formula_reference, span.publication_reference {
   font-size: 16px;
 }
 
+/* Main collection */
 
-.library .collection {
+#main .collection {
    background: white;
    position: absolute;
    left: 300px;
@@ -1076,8 +1076,7 @@ span.annotation.formula_reference, span.publication_reference {
    width: 800px;
 }
 
-
-.library .collection a.document {
+#main .collection a.document {
   display: block;
   background: white;
   width: 400px;
@@ -1088,19 +1087,19 @@ span.annotation.formula_reference, span.publication_reference {
   float: left;
 }
 
-.library .collection a.document .title {
+#main .collection a.document .title {
   color: #1B6685;
   font-family: 'Avenir LT W01 85 Heavy', 'Montserrat', 'Source Sans Pro';
   font-size: 16px;
 }
 
-.library .collection a.document .authors {
+#main .collection a.document .authors {
   color: #777;
   font-size: 15px;
   padding: 10px 0;
 }
 
-.library .collection a.document:hover .title {
+#main .collection a.document:hover .title {
   color: rgba(11, 157, 217, 1);
 }
 
@@ -1689,6 +1688,14 @@ span.annotation.formula_reference, span.publication_reference {
   padding: 20px;
   overflow: auto;
 }
+/*
+Box 
+--------------------------------------- */
+
+.content-node.box > .content {
+  padding: 20px;
+}
+
 /* Codeblock Node
 -------------------------------------------------------------------------------*/
 
