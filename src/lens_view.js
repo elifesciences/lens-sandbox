@@ -19,6 +19,7 @@ var LensView = function(controller) {
   // --------
   
   this.listenTo(this.controller, 'context-changed', this.onContextChanged);
+  this.listenTo(this.controller, 'loading:started', this.displayLoadingIndicator);
 
   $(document).on('dragover', function () { return false; });
   $(document).on('ondragend', function () { return false; });
@@ -28,6 +29,11 @@ var LensView = function(controller) {
 
 
 LensView.Prototype = function() {
+
+  this.displayLoadingIndicator = function(msg) {
+    this.$('#main').empty();
+    this.$('.loading').html(msg).show();
+  };
 
   this.handleDroppedFile = function(e) {
     var ctrl = this.controller;
@@ -83,7 +89,6 @@ LensView.Prototype = function() {
   this.convertDocument = function() {
     console.log('converting..');
   };
-
 
   // Open Collection
   // ----------

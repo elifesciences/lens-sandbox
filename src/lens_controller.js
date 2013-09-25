@@ -233,6 +233,8 @@ LensController.Prototype = function() {
       fullscreen: !!fullscreen,
     };
 
+    this.trigger("loading:started", "Loading document ...");
+
     // Lens Controller state
     this.state = {
       collection: collectionId,
