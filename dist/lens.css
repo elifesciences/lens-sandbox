@@ -375,6 +375,11 @@ TOC
   font-size: 12px;
 }
 
+.resource-view.toc .heading-ref.level-5 {
+  padding-left: 100px;
+  font-size: 12px;
+}
+
 .resource-view.toc .heading-ref:hover {
   color: rgba(0,0,0,1.0);
 }
