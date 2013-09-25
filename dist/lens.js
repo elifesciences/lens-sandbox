@@ -799,7 +799,7 @@ Box.type = {
   "parent": "content",
   "properties": {
     "source_id": "string",
-    "label": "string", // full author name
+    "label": "string",
     "children": ["array", "paragraph"]
   }
 };
@@ -827,7 +827,7 @@ Box.description = {
 Box.example = {
   "id": "box_1",
   "type": "box",
-  "name": "Box 1",
+  "label": "Box 1",
   "children": ["paragraph_1", "paragraph_2"]
 };
 
@@ -2279,7 +2279,7 @@ PublicationInfo.type = {
   "parent": "content",
   "properties": {
     "received_on": "string",
-    "accpeted_on": "string",
+    "accepted_on": "string",
     "published_on": "string",
     "journal": "string",
     "article_type": "string",
@@ -2302,7 +2302,7 @@ PublicationInfo.description = {
   ],
   "properties": {
     "received_on": "Submission received",
-    "accpeted_on": "Paper accepted on",
+    "accepted_on": "Paper accepted on",
     "published_on": "Paper published on",
     "journal": "The Journal",
     "article_type": "Research Article vs. Insight, vs. Correction etc.",
@@ -3332,9 +3332,7 @@ ElifeConfiguration.Prototype = function() {
     //
     // <self-uri content-type="pdf" xlink:href="elife00007.pdf"/>
     
-    var pdfURI = article.querySelector("self-uri[content-type=pdf]");
-    console.log('PDFURI', pdfURI);
-    
+    var pdfURI = article.querySelector("self-uri[content-type=pdf]");    
 
     var pdfLink = [
       "http://cdn.elifesciences.org/elife-articles/",
@@ -3361,7 +3359,6 @@ ElifeConfiguration.Prototype = function() {
       "xml_link": "https://s3.amazonaws.com/elife-cdn/elife-articles/"+state.doc.id+"/elife"+state.doc.id+".xml", // "http://mickey.com/mouse.xml",
       "json_link": "http://mickey.com/mouse.json",
       "doi": articleDOI ? ["http://dx.doi.org/", articleDOI.textContent].join("") : "",
-      // TODO add actual properties
     };
 
 
@@ -3500,9 +3497,7 @@ ElifeConfiguration.Prototype = function() {
       
     }
     
-    //nodes = nodes.concat(converter.bodyNodes(state, util.dom.getChildren(body)));
     doc.create(articleInfo);
-    console.log(JSON.stringify(articleInfo))
     doc.show("info", articleInfo.id);
   };
 
@@ -5475,15 +5470,12 @@ var html = util.html;
 var Surface = require("substance-surface");
 var Outline = require("lens-outline");
 var View = require("substance-application").View;
-// var ContentRenderer = require("./renderers/content_renderer");
-// var ResourceRenderer = require("./renderers/resource_renderer");
 var TOC = require("substance-toc");
 var Data = require("substance-data");
 var Index = Data.Graph.Index;
 var $$ = require("substance-application").$$;
 
 var CORRECTION = -100; // Extra offset from the top
-
 
 
 var modes = {
@@ -5502,7 +5494,8 @@ var modeAssignments = {
   "formula": ["node"],
   "heading": ["node"],
   "paragraph": ["node"],
-  "list": ["node"]
+  "list": ["node"],
+  "box": ["node"]
 };
 
 
@@ -6099,7 +6092,6 @@ ReaderView.Prototype = function() {
       that.updateLayout();
       that.updateOutline();
     }, 1);
-
 
     // Jump marks for teh win
     if (state.node) {
@@ -28068,6 +28060,8 @@ LensController.Prototype = function() {
       fullscreen: !!fullscreen,
     };
 
+    this.trigger("loading:started", "Loading document ...");
+
     // Lens Controller state
     this.state = {
       collection: collectionId,
@@ -28234,6 +28228,7 @@ var LensView = function(controller) {
   // --------
   
   this.listenTo(this.controller, 'context-changed', this.onContextChanged);
+  this.listenTo(this.controller, 'loading:started', this.displayLoadingIndicator);
 
   $(document).on('dragover', function () { return false; });
   $(document).on('ondragend', function () { return false; });
@@ -28243,6 +28238,11 @@ var LensView = function(controller) {
 
 
 LensView.Prototype = function() {
+
+  this.displayLoadingIndicator = function(msg) {
+    this.$('#main').empty();
+    this.$('.loading').html(msg).show();
+  };
 
   this.handleDroppedFile = function(e) {
     var ctrl = this.controller;
@@ -28298,7 +28298,6 @@ LensView.Prototype = function() {
   this.convertDocument = function() {
     console.log('converting..');
   };
-
 
   // Open Collection
   // ----------
