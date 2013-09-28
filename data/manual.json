@@ -338,7 +338,7 @@
       "type": "text",
       "id": "text_22",
       "source_id": null,
-      "content": "Pandoc >= 1.10.x (for on-the-fly generation of the Lens manual from Markdown)"
+      "content": "Pandoc >= 1.12.x (for on-the-fly generation of the Lens manual from Markdown)"
     },
     "list_2": {
       "type": "list",
