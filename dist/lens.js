@@ -5829,8 +5829,8 @@ ReaderView.Prototype = function() {
   // This fixes some issues that can't be dealth with CSS
 
   this.updateLayout = function() {
-    // var docWidth = this.$('.document').width();
-    // this.contentView.$('.nodes > .content-node').css('width', docWidth - 15 - 50);
+    var docWidth = this.$('.document').width();
+    this.contentView.$('.nodes > .content-node').css('width', docWidth - 15 - 50 - 15);
   },
 
   // Free the memory.
