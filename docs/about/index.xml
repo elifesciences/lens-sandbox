@@ -66,7 +66,7 @@
       </p>
       <media id="video1" content-type="glencoe play-in-place height-250 width-310" xlink:href="http://cdn.elifesciences.org/video/eLifeLensIntro2.mp4" mimetype="video" mime-subtype="avi">
         <object-id pub-id-type="doi">10.7554/eLife.00116.004</object-id>
-        <label>Video 1</label>
+        <label>Video 1.</label>
         <caption>
         <title>Introducing eLife Lens.</title>
           <p>Watch Ian Mulvany from eLife demonstrating Lens.</p>
@@ -90,7 +90,7 @@
       <label>Figure 2.</label>
       <caption>
         <title>The workspace of Lens.</title>
-        <p>A. The document map. Each gray bar identifies an individual paragraph within the article. B. The article’s text content. C. All of the associated resources. This includes the Table of Contents, figures, references and additional information, including meta-data, about the article.</p>
+        <p><bold>A.</bold> The document map. Each gray bar identifies an individual paragraph within the article. <bold>B.</bold> The article’s text content. <bold>C.</bold> All of the associated resources. This includes the Table of Contents, figures, references and additional information, including meta-data, about the article.</p>
       </caption>
       <graphic xlink:href="about_fig2.svg"/>
       </fig>
