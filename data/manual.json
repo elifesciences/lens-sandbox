@@ -15,6 +15,7 @@
       "creator": "",
       "title": "",
       "abstract": "",
+      "published_on": "2013-10-02T00:39:29.826Z",
       "meta": {}
     },
     "content": {
@@ -37,65 +38,65 @@
         "text_12",
         "figure_1",
         "header_5",
-        "text_14",
+        "text_13",
         "figure_2",
         "header_6",
-        "text_16",
+        "text_14",
         "figure_3",
-        "text_18",
+        "text_15",
         "codeblock_1",
-        "text_19",
+        "text_16",
         "header_7",
-        "text_20",
+        "text_17",
         "header_8",
         "list_2",
-        "text_23",
+        "text_20",
         "header_9",
-        "text_24",
+        "text_21",
         "codeblock_2",
-        "text_25",
+        "text_22",
         "codeblock_3",
-        "text_26",
+        "text_23",
         "codeblock_4",
-        "text_27",
+        "text_24",
         "codeblock_5",
-        "text_28",
+        "text_25",
         "header_10",
-        "text_29",
+        "text_26",
         "codeblock_6",
-        "text_30",
+        "text_27",
         "codeblock_7",
         "header_11",
-        "text_31",
+        "text_28",
         "header_12",
+        "text_29",
+        "text_30",
+        "codeblock_8",
+        "text_31",
+        "codeblock_9",
         "text_32",
         "text_33",
-        "codeblock_8",
-        "text_34",
-        "codeblock_9",
-        "text_35",
-        "text_36",
         "codeblock_10",
         "header_13",
+        "text_34",
+        "text_35",
+        "codeblock_11",
+        "text_36",
+        "header_14",
         "text_37",
         "text_38",
-        "codeblock_11",
-        "text_39",
-        "header_14",
-        "text_40",
-        "text_41",
         "codeblock_12",
-        "text_42",
+        "text_39",
         "codeblock_13",
-        "text_43",
+        "text_40",
         "codeblock_14",
-        "text_44",
+        "text_41",
         "codeblock_15",
-        "text_45",
+        "text_42",
         "codeblock_16",
-        "text_46",
+        "text_43",
         "codeblock_17",
-        "text_47",
+        "text_44",
         "codeblock_18"
       ]
     },
@@ -108,7 +109,7 @@
     "header_1": {
       "type": "heading",
       "id": "header_1",
-      "source_id": "",
+      "source_id": "introduction",
       "content": "Introduction",
       "level": 1
     },
@@ -121,7 +122,7 @@
     "header_2": {
       "type": "heading",
       "id": "header_2",
-      "source_id": "",
+      "source_id": "the-big-picture",
       "content": "The Big Picture",
       "level": 2
     },
@@ -134,7 +135,7 @@
     "header_3": {
       "type": "heading",
       "id": "header_3",
-      "source_id": "",
+      "source_id": "the-lens-article-format",
       "content": "The Lens Article Format",
       "level": 2
     },
@@ -194,7 +195,7 @@
     "header_4": {
       "type": "heading",
       "id": "header_4",
-      "source_id": "",
+      "source_id": "nodes",
       "content": "Nodes",
       "level": 3
     },
@@ -210,89 +211,56 @@
       "source_id": null,
       "content": "The following graphic shows a sample document containing a heading (h1), paragraph (p1), and formula (f1). It also has an image (i1) and a table (t1) as well as two citations (c1 and c2)."
     },
-    "image_1": {
-      "type": "image",
-      "id": "image_1",
-      "source_id": "",
-      "url": "http://f.cl.ly/items/060x2w1f2r1A3y3D3z2w/lens-document-nodes.png"
+    "figure_1": {
+      "type": "figure",
+      "id": "figure_1",
+      "url": "http://f.cl.ly/items/060x2w1f2r1A3y3D3z2w/lens-document-nodes.png",
+      "label": "",
+      "caption": null
+    },
+    "header_5": {
+      "type": "heading",
+      "id": "header_5",
+      "source_id": "views",
+      "content": "Views",
+      "level": 3
     },
     "text_13": {
       "type": "text",
       "id": "text_13",
       "source_id": null,
-      "content": ""
+      "content": "Now these building blocks of a document are organized using views. The main body of the document is referenced in the content view. Figures (like images and tables) are kept in the figures view while citations live in citations respectively."
     },
-    "figure_1": {
+    "figure_2": {
       "type": "figure",
-      "id": "figure_1",
-      "image": "image_1",
-      "caption": "text_13"
+      "id": "figure_2",
+      "url": "http://f.cl.ly/items/0J3m3D3Z2u3E292A1j3T/lens-document-views.png",
+      "label": "",
+      "caption": null
     },
-    "header_5": {
+    "header_6": {
       "type": "heading",
-      "id": "header_5",
-      "source_id": "",
-      "content": "Views",
-      "level": 3
+      "id": "header_6",
+      "source_id": "the-lens-converter",
+      "content": "The Lens Converter",
+      "level": 2
     },
     "text_14": {
       "type": "text",
       "id": "text_14",
       "source_id": null,
-      "content": "Now these building blocks of a document are organized using views. The main body of the document is referenced in the content view. Figures (like images and tables) are kept in the figures view while citations live in citations respectively."
-    },
-    "image_2": {
-      "type": "image",
-      "id": "image_2",
-      "source_id": "",
-      "url": "http://f.cl.ly/items/0J3m3D3Z2u3E292A1j3T/lens-document-views.png"
-    },
-    "text_15": {
-      "type": "text",
-      "id": "text_15",
-      "source_id": null,
-      "content": ""
-    },
-    "figure_2": {
-      "type": "figure",
-      "id": "figure_2",
-      "image": "image_2",
-      "caption": "text_15"
-    },
-    "header_6": {
-      "type": "heading",
-      "id": "header_6",
-      "source_id": "",
-      "content": "The Lens Converter",
-      "level": 2
-    },
-    "text_16": {
-      "type": "text",
-      "id": "text_16",
-      "source_id": null,
       "content": "Lens can natively read the JATS (formerly NLM) format, thanks to its built-in converter."
-    },
-    "image_3": {
-      "type": "image",
-      "id": "image_3",
-      "source_id": "",
-      "url": "http://f.cl.ly/items/1S1p1L3s2d0a0T372I0v/Screen%20Shot%202013-09-12%20at%2012.56.21%20AM.png"
-    },
-    "text_17": {
-      "type": "text",
-      "id": "text_17",
-      "source_id": null,
-      "content": ""
     },
     "figure_3": {
       "type": "figure",
       "id": "figure_3",
-      "image": "image_3",
-      "caption": "text_17"
+      "url": "http://f.cl.ly/items/1S1p1L3s2d0a0T372I0v/Screen%20Shot%202013-09-12%20at%2012.56.21%20AM.png",
+      "label": "",
+      "caption": null
     },
-    "text_18": {
+    "text_15": {
       "type": "text",
-      "id": "text_18",
+      "id": "text_15",
       "source_id": null,
       "content": "Conversion is done on the client side using the browser-native DOM Parser. Using it is simle:"
     },
@@ -302,41 +270,41 @@
       "source_id": "",
       "content": "var importer = new LensImporter();\nvar doc = importer.import(xmlData);"
     },
-    "text_19": {
+    "text_16": {
       "type": "text",
-      "id": "text_19",
+      "id": "text_16",
       "source_id": null,
       "content": "The converter can handle any NLM-compatible file. Some portions are publisher-specific, like resolving the url's for figures and videos. This is done in configurations. We have implemented configurations for eLife, Landes Bioscience and PLOS."
     },
     "header_7": {
       "type": "heading",
       "id": "header_7",
-      "source_id": "",
+      "source_id": "installation",
       "content": "Installation",
       "level": 1
     },
-    "text_20": {
+    "text_17": {
       "type": "text",
-      "id": "text_20",
+      "id": "text_17",
       "source_id": null,
       "content": "It's fairly easy to install and run the latest Lens development version locally."
     },
     "header_8": {
       "type": "heading",
       "id": "header_8",
-      "source_id": "",
+      "source_id": "prerequisites",
       "content": "Prerequisites",
       "level": 2
     },
-    "text_21": {
+    "text_18": {
       "type": "text",
-      "id": "text_21",
+      "id": "text_18",
       "source_id": null,
       "content": "Node.js >=0.8.x"
     },
-    "text_22": {
+    "text_19": {
       "type": "text",
-      "id": "text_22",
+      "id": "text_19",
       "source_id": null,
       "content": "Pandoc >= 1.12.x (for on-the-fly generation of the Lens manual from Markdown)"
     },
@@ -345,27 +313,27 @@
       "id": "list_2",
       "source_id": "",
       "items": [
-        "text_21",
-        "text_22"
+        "text_18",
+        "text_19"
       ],
       "ordered": false
     },
-    "text_23": {
+    "text_20": {
       "type": "text",
-      "id": "text_23",
+      "id": "text_20",
       "source_id": null,
       "content": "Node.js is just used as a development environment. You'll soon be able to create self-contained packages of individual modules or the main app itself."
     },
     "header_9": {
       "type": "heading",
       "id": "header_9",
-      "source_id": "",
+      "source_id": "fresh-install",
       "content": "Fresh install",
       "level": 2
     },
-    "text_24": {
+    "text_21": {
       "type": "text",
-      "id": "text_24",
+      "id": "text_21",
       "source_id": null,
       "content": "First install the Substance Screwdriver command line utility. It's just a little helper that makes dealing with our many modules easier."
     },
@@ -375,9 +343,9 @@
       "source_id": "",
       "content": "$ git clone https://github.com/substance/screwdriver.git\n$ cd screwdriver\n$ sudo python setup.py install"
     },
-    "text_25": {
+    "text_22": {
       "type": "text",
-      "id": "text_25",
+      "id": "text_22",
       "source_id": null,
       "content": "Clone the Lens Mothership"
     },
@@ -387,9 +355,9 @@
       "source_id": "",
       "content": "$ git clone https://github.com/elifesciences/lens.git"
     },
-    "text_26": {
+    "text_23": {
       "type": "text",
-      "id": "text_26",
+      "id": "text_23",
       "source_id": null,
       "content": "Run the update command, which pulls in all the sub-modules and dependencies"
     },
@@ -399,9 +367,9 @@
       "source_id": "",
       "content": "$ cd lens\n$ substance --update"
     },
-    "text_27": {
+    "text_24": {
       "type": "text",
-      "id": "text_27",
+      "id": "text_24",
       "source_id": null,
       "content": "Finally start the server"
     },
@@ -411,22 +379,22 @@
       "source_id": "",
       "content": "$ substance"
     },
-    "text_28": {
+    "text_25": {
       "type": "text",
-      "id": "text_28",
+      "id": "text_25",
       "source_id": null,
       "content": "You can have a look at the example document, by pointing your browser to http://localhost:4000/#lens/lorem_ipsum, view the autogenerated Lens.Article documentation here http://localhost:4000/#lens/lens_article or the manual http://localhost:4000/#lens/manual."
     },
     "header_10": {
       "type": "heading",
       "id": "header_10",
-      "source_id": "",
+      "source_id": "keep-your-local-version-in-sync",
       "content": "Keep your local version in sync",
       "level": 2
     },
-    "text_29": {
+    "text_26": {
       "type": "text",
-      "id": "text_29",
+      "id": "text_26",
       "source_id": null,
       "content": "You may want to pull in updates every now and then, which is simple. In the Lens project root dir do:"
     },
@@ -436,9 +404,9 @@
       "source_id": "",
       "content": "$ substance --update"
     },
-    "text_30": {
+    "text_27": {
       "type": "text",
-      "id": "text_30",
+      "id": "text_27",
       "source_id": null,
       "content": "And start the dev environment again."
     },
@@ -451,32 +419,32 @@
     "header_11": {
       "type": "heading",
       "id": "header_11",
-      "source_id": "",
+      "source_id": "configuration",
       "content": "Configuration",
       "level": 2
     },
-    "text_31": {
+    "text_28": {
       "type": "text",
-      "id": "text_31",
+      "id": "text_28",
       "source_id": null,
       "content": "By default your local Lens installations serves a bunch of example documents plus Lens related documents. However you can easily configure Lens so it fetches content from a different source by adapting config/config.json to your needs."
     },
     "header_12": {
       "type": "heading",
       "id": "header_12",
-      "source_id": "",
+      "source_id": "contributing",
       "content": "Contributing",
       "level": 1
     },
-    "text_32": {
+    "text_29": {
       "type": "text",
-      "id": "text_32",
+      "id": "text_29",
       "source_id": null,
       "content": "I'm assuming here that you have push access to the repositories, because as a start I'd like to get the Lens core dev team up and running. I'll provide documentation on how to work with a forked version of a module and submit a pull request soon."
     },
-    "text_33": {
+    "text_30": {
       "type": "text",
-      "id": "text_33",
+      "id": "text_30",
       "source_id": null,
       "content": "Say you've made changes to the Lens.Article module. In order to commit them you simply have to navigate to node_modules/lens-article and do:"
     },
@@ -486,9 +454,9 @@
       "source_id": "",
       "content": "$ git add <YOUR STUFF>\n$ git commit -m \"Fixed X\"\n$ git push"
     },
-    "text_34": {
+    "text_31": {
       "type": "text",
-      "id": "text_34",
+      "id": "text_31",
       "source_id": null,
       "content": "Alternatively, if you are working on breaking changes you can switch to a different branch, and submit a pull request using the Github interface. Here's how:"
     },
@@ -498,15 +466,15 @@
       "source_id": "",
       "content": "$ git checkout -b my_feature_branch\n$ git add <YOUR STUFF>\n$ git commit -m \"Fixed X\"\n$ git push"
     },
-    "text_35": {
+    "text_32": {
       "type": "text",
-      "id": "text_35",
+      "id": "text_32",
       "source_id": null,
       "content": "Then go to Github and submit a pull request."
     },
-    "text_36": {
+    "text_33": {
       "type": "text",
-      "id": "text_36",
+      "id": "text_33",
       "source_id": null,
       "content": "Another hint: To pull in upstream changes from master for the entire project do this:"
     },
@@ -519,19 +487,19 @@
     "header_13": {
       "type": "heading",
       "id": "header_13",
-      "source_id": "",
+      "source_id": "adjusting-styles",
       "content": "Adjusting styles",
       "level": 2
     },
-    "text_37": {
+    "text_34": {
       "type": "text",
-      "id": "text_37",
+      "id": "text_34",
       "source_id": null,
       "content": "Most customization can be done using CSS without interfering with the Lens codebase. You only override styles on the application level."
     },
-    "text_38": {
+    "text_35": {
       "type": "text",
-      "id": "text_38",
+      "id": "text_35",
       "source_id": null,
       "content": "Say you'd like to like to color citation cards red."
     },
@@ -541,28 +509,28 @@
       "source_id": "",
       "content": "#my_app .article .citations .resource-header {\n  background: red;\n}"
     },
-    "text_39": {
+    "text_36": {
       "type": "text",
-      "id": "text_39",
+      "id": "text_36",
       "source_id": null,
       "content": "You've got the basic idea, now it's on you. It should be easy to pull in changes from the official Lens modules, without breaking your customized app."
     },
     "header_14": {
       "type": "heading",
       "id": "header_14",
-      "source_id": "",
+      "source_id": "implement-a-new-node-type",
       "content": "Implement a new node type",
       "level": 2
     },
-    "text_40": {
+    "text_37": {
       "type": "text",
-      "id": "text_40",
+      "id": "text_37",
       "source_id": null,
       "content": "It doesn't take much to implement a new node type for Lens. However, make sure there isn't an existing node type that covers your needs. We would prefer that you adjust existing types and contribute back. If we'd all figure out a way to find common ground in our scientific language that would be awesome. :)"
     },
-    "text_41": {
+    "text_38": {
       "type": "text",
-      "id": "text_41",
+      "id": "text_38",
       "source_id": null,
       "content": "Anyway, let's create a new node type now. For the purpose of demonstration only, let's create a cat node type that you can reference in the main body of the document. The first thing to do is create a new folder in the lens-article repository /nodes/cat. The structure of that folder will be like this:"
     },
@@ -572,9 +540,9 @@
       "source_id": "",
       "content": "index.js\ncat.js\ncat_view.js\ncat.css"
     },
-    "text_42": {
+    "text_39": {
       "type": "text",
-      "id": "text_42",
+      "id": "text_39",
       "source_id": null,
       "content": "Let's start by specifying the type definitions in cat.js."
     },
@@ -584,9 +552,9 @@
       "source_id": "",
       "content": "var _ = require('underscore');\nvar Node = require('substance-document').Node;\n\nvar Cat = function(node, doc) {\n  Node.call(this, node, doc);\n};\n\n// Type definition\n// -----------------\n//\n\nCat.type = {\n  \"id\": \"cat\",\n  \"parent\": \"figure\",\n  \"properties\": {\n    \"name\": \"string\",\n    \"speed\": \"string\",\n    \"abilities\": [\"array\", \"string\"],\n  }\n};\n\nCat.prototype = Node.prototype\nCat.prototype.constructor = Cat;\n\n\n// Auto-generate property getters based on the type definition \n// --------\n\nvar getters = {};\n\n_.each(Cat.type.properties, function(prop, key) {\n  getters[key] = {\n    get: function() {\n      return this.properties[key];\n    }\n  };\n});\n\n\nObject.defineProperties(Cat.prototype, _.extend(getters, {\n  caption: {\n    // Used for \n    heading: function() {\n      return this.properties.\n    }\n  }\n}));\n\nmodule.exports = Cat;"
     },
-    "text_43": {
+    "text_40": {
       "type": "text",
-      "id": "text_43",
+      "id": "text_40",
       "source_id": null,
       "content": "That was easy. Now we need to implement a view for the Cat model we just defined. Here is cat_view.js."
     },
@@ -596,9 +564,9 @@
       "source_id": "",
       "content": "var NodeView = require(\"../node\").View;\n\nvar CatView = function(node) {\n  NodeView.call(this, node);\n\n  this.$el.attr({id: node.id});\n  this.$el.addClass(\"content-node cat\");\n};\n\nCatView.Prototype = function() {\n\n  this.render = function() {\n    NodeView.prototype.render.call(this);\n    var node = this.node;\n\n    var html = [\n      '<div class=\"name\">'+this.cat+'</div>'\n      '<div class=\"speed\">'+this.speed+'</div>'\n      '<div class=\"abilities\">'+this.abilities.join(', ')+'</div>'\n    ].join('\\n');\n\n    this.content.innerHTML = html;\n\n    return this;\n  }\n};\n\n// CatView inherits from NodeView\nCatView.Prototype.prototype = NodeView.prototype;\nCatView.prototype = new CatView.Prototype();\n\nmodule.exports = CatView;"
     },
-    "text_44": {
+    "text_41": {
       "type": "text",
-      "id": "text_44",
+      "id": "text_41",
       "source_id": null,
       "content": "Add some styles in cat.css:"
     },
@@ -608,9 +576,9 @@
       "source_id": "",
       "content": ".content-node.cat .name {\n  font-size: 20px;\n  color: green;\n}"
     },
-    "text_45": {
+    "text_42": {
       "type": "text",
-      "id": "text_45",
+      "id": "text_42",
       "source_id": null,
       "content": "By convention, there needs to be an index.js file in the repo."
     },
@@ -620,9 +588,9 @@
       "source_id": "",
       "content": "module.exports = {\n  Model: require('./cat'),\n  View: require('./cat_view')\n};"
     },
-    "text_46": {
+    "text_43": {
       "type": "text",
-      "id": "text_46",
+      "id": "text_43",
       "source_id": null,
       "content": "Finally you have to register your new node type in nodes/index.js."
     },
@@ -632,9 +600,9 @@
       "source_id": "",
       "content": "module.exports = {\n  ...\n  \"cat\": require(\"./cat\"),\n  ...\n};"
     },
-    "text_47": {
+    "text_44": {
       "type": "text",
-      "id": "text_47",
+      "id": "text_44",
       "source_id": null,
       "content": "Now in your actual document, you can specify and reference cat resources. It looks like so:"
     },
@@ -797,7 +765,7 @@
       "type": "code",
       "id": "code_8",
       "path": [
-        "text_14",
+        "text_13",
         "content"
       ],
       "range": [
@@ -809,7 +777,7 @@
       "type": "code",
       "id": "code_9",
       "path": [
-        "text_14",
+        "text_13",
         "content"
       ],
       "range": [
@@ -821,7 +789,7 @@
       "type": "code",
       "id": "code_10",
       "path": [
-        "text_14",
+        "text_13",
         "content"
       ],
       "range": [
@@ -833,7 +801,7 @@
       "type": "link",
       "id": "link_6",
       "path": [
-        "text_16",
+        "text_14",
         "content"
       ],
       "range": [
@@ -846,7 +814,7 @@
       "type": "link",
       "id": "link_7",
       "path": [
-        "text_16",
+        "text_14",
         "content"
       ],
       "range": [
@@ -859,7 +827,7 @@
       "type": "link",
       "id": "link_8",
       "path": [
-        "text_18",
+        "text_15",
         "content"
       ],
       "range": [
@@ -872,7 +840,7 @@
       "type": "link",
       "id": "link_9",
       "path": [
-        "text_19",
+        "text_16",
         "content"
       ],
       "range": [
@@ -885,7 +853,7 @@
       "type": "link",
       "id": "link_10",
       "path": [
-        "text_19",
+        "text_16",
         "content"
       ],
       "range": [
@@ -898,7 +866,7 @@
       "type": "link",
       "id": "link_11",
       "path": [
-        "text_19",
+        "text_16",
         "content"
       ],
       "range": [
@@ -911,7 +879,7 @@
       "type": "link",
       "id": "link_12",
       "path": [
-        "text_22",
+        "text_19",
         "content"
       ],
       "range": [
@@ -924,7 +892,7 @@
       "type": "code",
       "id": "code_11",
       "path": [
-        "text_28",
+        "text_25",
         "content"
       ],
       "range": [
@@ -936,7 +904,7 @@
       "type": "code",
       "id": "code_12",
       "path": [
-        "text_28",
+        "text_25",
         "content"
       ],
       "range": [
@@ -948,7 +916,7 @@
       "type": "code",
       "id": "code_13",
       "path": [
-        "text_28",
+        "text_25",
         "content"
       ],
       "range": [
@@ -960,7 +928,7 @@
       "type": "code",
       "id": "code_14",
       "path": [
-        "text_31",
+        "text_28",
         "content"
       ],
       "range": [
@@ -972,7 +940,7 @@
       "type": "code",
       "id": "code_15",
       "path": [
-        "text_33",
+        "text_30",
         "content"
       ],
       "range": [
@@ -984,7 +952,7 @@
       "type": "link",
       "id": "link_13",
       "path": [
-        "text_35",
+        "text_32",
         "content"
       ],
       "range": [
@@ -997,7 +965,7 @@
       "type": "code",
       "id": "code_16",
       "path": [
-        "text_41",
+        "text_38",
         "content"
       ],
       "range": [
@@ -1009,7 +977,7 @@
       "type": "code",
       "id": "code_17",
       "path": [
-        "text_41",
+        "text_38",
         "content"
       ],
       "range": [
@@ -1021,7 +989,7 @@
       "type": "code",
       "id": "code_18",
       "path": [
-        "text_41",
+        "text_38",
         "content"
       ],
       "range": [
@@ -1033,7 +1001,7 @@
       "type": "code",
       "id": "code_19",
       "path": [
-        "text_42",
+        "text_39",
         "content"
       ],
       "range": [
@@ -1045,7 +1013,7 @@
       "type": "code",
       "id": "code_20",
       "path": [
-        "text_43",
+        "text_40",
         "content"
       ],
       "range": [
@@ -1057,7 +1025,7 @@
       "type": "code",
       "id": "code_21",
       "path": [
-        "text_43",
+        "text_40",
         "content"
       ],
       "range": [
@@ -1069,7 +1037,7 @@
       "type": "code",
       "id": "code_22",
       "path": [
-        "text_44",
+        "text_41",
         "content"
       ],
       "range": [
@@ -1081,7 +1049,7 @@
       "type": "code",
       "id": "code_23",
       "path": [
-        "text_45",
+        "text_42",
         "content"
       ],
       "range": [
@@ -1093,7 +1061,7 @@
       "type": "code",
       "id": "code_24",
       "path": [
-        "text_46",
+        "text_43",
         "content"
       ],
       "range": [
@@ -1105,7 +1073,7 @@
       "type": "code",
       "id": "code_25",
       "path": [
-        "text_47",
+        "text_44",
         "content"
       ],
       "range": [
