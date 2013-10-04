@@ -30,7 +30,7 @@
             <surname>Grubisic</surname>
             <given-names>Ivan</given-names>
           </name>
-          <xref ref-type="aff" rid="aff1">2</xref>
+          <xref ref-type="aff" rid="aff1">1</xref>
           <xref ref-type="fn" rid="con1"/>
         </contrib>
 
@@ -62,36 +62,85 @@
     </article-meta>
   </front>
   <body>
-      <p>eLife Lens provides a novel way of looking at content on the web. It is designed to make life easier for researchers, reviewers, authors and readers. For example, have you tried to look at a figure in an online article, while at the same time trying to see what the author says about the figure, jumping all around the article, losing track of what you were looking for in the first place? The reason for this is that most online research articles are published in a fixed digital version of the original paper. With eLife Lens, we take full advantage of the dynamic nature of HTML combined with javascript (<xref ref-type="fig" rid="video1">Video 1</xref>).
-      </p>
-      <media id="video1" content-type="glencoe play-in-place height-250 width-310" xlink:href="http://cdn.elifesciences.org/video/eLifeLensIntro2.mp4" mimetype="video" mime-subtype="avi">
-        <object-id pub-id-type="doi">10.7554/eLife.00116.004</object-id>
-        <label>Video 1</label>
-        <caption>
-        <title>Introducing eLife Lens.</title>
-          <p>Watch Ian Mulvany from eLife demonstrating Lens.</p>
-        </caption>
-      </media>
+    <p>eLife Lens provides a novel way of looking at content on the web. It is designed to make life easier for researchers, reviewers, authors and readers. For example, have you tried to look at a figure in an online article, while at the same time trying to see what the author says about the figure, jumping all around the article, losing track of what you were looking for in the first place? The reason for this is that most online research articles are published in a fixed digital version of the original paper. With eLife Lens, we take full advantage of the dynamic nature of HTML combined with javascript (<xref ref-type="fig" rid="video1">Video 1</xref>).</p>
     <sec id="s1" sec-type="motivation">
       <title>Motivation</title>
       <p>Working with digital documents has been difficult for the most part, because they come in presentation-centric formats, optimized for print and with the intent to have the same display across multiple devices. Ultimately, the display of these documents is preserved to allow the user to print the exact same document across any device. Content today, however, is no longer being printed out readily; instead, it is read on a variety of platforms spanning computers and mobile devices. The limitations presented by different screen sizes, the lack of tactile feedback that comes from flipping between pages and inability to purely focus on the author’s arguments are problems present in all disciplines.</p>
+      <p>The web browser provides a unified platform for viewing content. Instead of binding the content to a presentation focused format, we can view the content as data (<xref rid='Aufreiter' ref-type="bib">Aufreiter 2013</xref>). Thereby making the content readily accessible by utilizing a defined data structure. This data structure can then be processed in similar ways to databases -- allowing users to query the content, create new content and build new tools.</p>
+      <p>We have decided to focus our initial efforts on applying the data-centric representation of content to the scientific literature. The Open Access scientific community has standardized much of their content into a formally annotated XML format, making it easier to gain access to a large library of articles. The content of scientific articles is a combination of text, figures, tables, videos and references which are used to form the author’s argument. Scientific arguments are also rarely linear in nature, making it difficult to follow an argument when all of the content is not readily viewable on a digital device. The large amount of available data and non-linear format of the articles, provided us with the ideal start to test the flexibility of our data-centric approach. With the release of Lens, we would like to not only promote the data-centric representation of scientific content, but that of any content, which would be optimized for viewing on web clients.</p>
     </sec>
     <sec id="s2" sec-type="presentation">
       <title>The Presentation of Lens</title>
-      <p>When designing Lens, we worked to provide a flexible experience that supports a variety of use cases. On the far left the document map (<xref ref-type="fig" rid="fig2">Figure 2A</xref>) identifies the readers position in the context of the whole article. It also outlines each paragraph in the article. The left panel includes all of the textual content of the article (Figure 2B). The right panel includes the resources (Figure 2C). The resources are defined as the table of contents, figures, tables, videos, supplemental data, references and information about the article. By splitting apart the content into individual panels, we enable the reader to focus on multiple content bits at the same time.</p>
+      <p>When designing Lens, we worked to provide a flexible experience that supports a variety of use cases. On the far left the document map (<xref ref-type="fig" rid="fig2">Figure 2A</xref>) identifies the readers position in the context of the whole article. It also outlines each paragraph in the article. The left panel includes all of the textual content of the article (<xref ref-type="fig" rid="fig2">Figure 2B</xref>). The right panel includes the resources (<xref ref-type="fig" rid="fig2">Figure 2C</xref>). The resources are defined as the table of contents, figures, tables, videos, supplemental data, references and information about the article. By splitting apart the content into individual panels, we enable the reader to focus on multiple content bits at the same time.</p>
+      <p>When reading scientific articles, it is rare for a reader to read straight through the text and figures in order. Instead, they may look to get a quick overview of the paper by looking at the figures first. By splitting the figures out from the text, the reader can transition between the two independently of one another. This allows the reader to simultaneously view exactly the content they want to focus on at that moment.</p>
+      <p>Two viewing modes that are implicitly supported are text-centric and resource-centric viewing. Text-centric viewing creates a microscale reading experience by limiting the viewable content to a singular content node. When a figure or publication label is selected within a text node, only the figures or publications that are referenced within that paragraph will be displayed in their appropriate resource sections (<xref rid="fig3" ref-type="fig">Figure 3</xref>, <xref rid="fig4" ref-type="fig">Figure 4</xref>). Selection of any figure or publication will color the paragraphs in the document map (<xref rid="fig2" ref-type="fig">Figure 2A</xref>) that include a reference to the selected resource.</p>
+      <p>The presentation of the article information has also been redesigned to organize the information in a uniform way. Each publisher will have information like the author’s impact statement, article keywords, major dataset links, etc. placed in different positions of their HTML or PDF versions of the articles. The aim is to distill all of the article information into organized subsections that can be displayed together on individual cards. The information cards create a uniform viewing experience making it easy to quickly find what the reader is looking for.</p>
+      <p>In addition to simplifying the reading experience of research articles, Lens also provides useful tools to share content with others. Each of the content nodes in the data structure are deep-linked which means that each state is defined by a given URL. Sharing a specific URL will take the new reader to the exact same state in their browser which will facilitate the ease discussions about the content.</p>
+    </sec>
+    <sec id="s3" sec-type="format">
+    	<title>The Lens Document Format</title>
+      <p>We are convinced that there is a need to break with traditional presentation-centric formats, by considering content as data and making it accessible in new ways (<xref rid="Aufreiter" ref-type="bib">Aufreiter 2013</xref>). Therefore with the release of Lens, we’d like to promote a data-centric representation of scientific content, optimized for being consumed by web-clients.</p>
+      <p>Lens can display any document that conforms to a simple JSON representation. JSON representations are flexible and can be adapted to any type of content. The initial JSON object provides the framework for organizing all of the content in an article. The id and properties keys provide global access if many JSON articles are to be queried for an initial round of filtering. The nodes key contains all of the content and the view key defines indices about what order the nodes will be displayed. The nodes are then linked together via annotations. The annotations are defined by either an explicit reference to a target content node that is contained in its source content code or font styling. <xref ref-type="fig" rid="fig1">Figure 1</xref> outlines a simple example of how to use the JSON representation to compose an article for Lens.</p>
+      <p>The creation of an article's JSON depends on a converter script that runs through the XML tags using the sax-js node.js module. The XML tags define various types of content nodes. Each node contains type, id and content keys that the viewer then uses to define the rendering. All of the keys have their own definitions with regards to how Lens renders them. The translation from the XML to a structured JSON creates a consistent presentation scheme for the content.</p>
+    </sec>
+    <sec id="s4" sec-type="open_source">
+    <title>Open Source</title>
+    <p>Lens is open source software. Its codebase is fairly small (less than 1000 lines of code) and available on <ext-link xlink:href="https://github.com/elifesciences/lens">Github</ext-link>. We'd like to invite anyone to use Lens for displaying their own content and get involved in the development process.</p>
+    </sec>
+    <sec id="s5" sec-type="usability">
+    	<title>Viewing New Content</title>
+      <p>text goes here.</p>
+    </sec>
+    <sec id="s6" sec-type="credits">
+    <title>Credits</title>
+    <p>text goes here.</p>
+    </sec>
+  </body>
+  <back>
+    <media id="video1" content-type="glencoe play-in-place height-250 width-310" xlink:href="video_1" mimetype="video" mime-subtype="avi">
+      <object-id pub-id-type="doi">10.7554/eLife.00116.004</object-id>
+      <label>Video 1.</label>
+      <caption>
+        <title>Introducing eLife Lens.</title>
+        <p>Watch Ian Mulvany from eLife demonstrating Lens.</p>
+      </caption>
+    </media>
 
-      <fig id="fig2">
+    <fig id="fig1">
+      <label>Figure 1.</label>
+      <caption>
+        <title>Insert Figure 1 caption</title>
+        <p>Insert Figure 1 caption ...</p>
+      </caption>
+      <graphic xlink:href="figure_1.png"/>
+    </fig>
+
+    <fig id="fig2">
       <label>Figure 2.</label>
       <caption>
         <title>The workspace of Lens.</title>
-        <p>A. The document map. Each gray bar identifies an individual paragraph within the article. B. The article’s text content. C. All of the associated resources. This includes the Table of Contents, figures, references and additional information, including meta-data, about the article.</p>
+        <p><bold>A.</bold> The document map. Each gray bar identifies an individual paragraph within the article. <bold>B.</bold> The article’s text content. <bold>C.</bold> All of the associated resources. This includes the Table of Contents, figures, references and additional information, including meta-data, about the article.</p>
       </caption>
-      <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="elife00116f001"/>
-      </fig>
+      <graphic xlink:href="figure_2.jpg"/>
+    </fig>
 
-    </sec>
+    <fig id="fig3">
+      <label>Figure 3.</label>
+      <caption>
+        <title>Insert Figure 3 caption</title>
+        <p>Insert Figure 3 caption ...</p>
+      </caption>
+      <graphic xlink:href="figure_3.jpg"/>
+    </fig>
 
-  </body>
-  <back>
+    <fig id="fig4">
+      <label>Figure 4.</label>
+      <caption>
+        <title>Insert Figure 4 caption</title>
+        <p>Insert Figure 4 caption ...</p>
+      </caption>
+      <graphic xlink:href="figure_4.png"/>
+    </fig>
+
   </back>
 </article>
