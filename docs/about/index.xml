@@ -97,7 +97,7 @@
     </sec>
   </body>
   <back>
-    <media id="video1" content-type="glencoe play-in-place height-250 width-310" xlink:href="video_1" mimetype="video" mime-subtype="avi">
+    <media id="video1" content-type="glencoe play-in-place height-250 width-310" xlink:href="http://cdn.elifesciences.org/video/eLifeLensIntro2.mp4" mimetype="video" mime-subtype="avi">
       <object-id pub-id-type="doi">10.7554/eLife.00116.004</object-id>
       <label>Video 1.</label>
       <caption>
@@ -105,7 +105,6 @@
         <p>Watch Ian Mulvany from eLife demonstrating Lens.</p>
       </caption>
     </media>
-
     <fig id="fig1">
       <label>Figure 1.</label>
       <caption>
