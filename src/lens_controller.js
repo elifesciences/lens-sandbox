@@ -199,8 +199,11 @@ LensController.Prototype = function() {
 
           // Process XML file
           if(xml) {
+            var baseUrl = record.url.replace(/\/[^\/]*$/g, '/');
             var importer = new Converter.Importer();
-            doc = importer.import(data);
+            doc = importer.import(data, {
+              baseURL: baseUrl
+            });
 
             // Hotpatch the doc id, so it conforms to the id specified in the library file
             doc.id = documentId;
