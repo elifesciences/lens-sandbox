@@ -15,7 +15,7 @@
       "creator": "",
       "title": "",
       "abstract": "",
-      "published_on": "2013-10-04T15:49:00.793Z",
+      "published_on": "2013-10-04T15:57:36.482Z",
       "meta": {}
     },
     "content": {
@@ -273,7 +273,7 @@
       "type": "codeblock",
       "id": "codeblock_1",
       "source_id": "",
-      "content": "var importer = new LensImporter();\nvar doc = importer.import(xmlData);"
+      "content": "var importer = new LensImporter();\nvar doc = importer.import(xmlData, {\n  baseURL: \"http://docs.example.com/doc-25/\" // this path is used to resolve relative images\n});"
     },
     "text_16": {
       "type": "text",
