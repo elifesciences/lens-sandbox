@@ -124,8 +124,6 @@
     }
   },
   "styles": {
-    
-
     "styles/surface.css": "node_modules/substance-surface/styles/surface.css",
     "styles/lens-outline.css": "node_modules/lens-outline/outline.css",
 
