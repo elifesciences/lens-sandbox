@@ -2777,6 +2777,8 @@ var LensConverter = require("./src/lens_converter");
 module.exports = LensConverter;
 
 },{"./src/lens_converter":55}],50:[function(require,module,exports){
+var _ = require('underscore');
+
 
 var DefaultConfiguration = function() {
 
@@ -2803,14 +2805,19 @@ DefaultConfiguration.Prototype = function() {
     var url = element.getAttribute("xlink:href");
     // Just return absolute urls
     if (url.match(/http:/)) {
-      node.url = url;
+      var lastdotIdx = url.lastIndexOf(".");
+      var name = url.substring(0, lastdotIdx);
+      node.url = name+".mp4";
+      node.url_ogv = name+".ogv";
+      node.url_webm = name+".webm";
+      node.poster = name+".png";
       return;
     } else {
       var name = url.split(".")[0];
       node.url = state.options.baseURL+name+".mp4";
       node.url_ogv = state.options.baseURL+name+".ogv";
       node.url_webm = state.options.baseURL+name+".webm";
-      node.poster = state.options.baseURL+name+".jpg";
+      node.poster = state.options.baseURL+name+".png";
     }
   };
 
@@ -2818,7 +2825,6 @@ DefaultConfiguration.Prototype = function() {
   this.enhanceFigure = function(state, node, element) {
     var graphic = element.querySelector("graphic");
     var url = graphic.getAttribute("xlink:href");
-
     node.url = this.resolveURL(state, url);
   };
 
@@ -2852,7 +2858,7 @@ DefaultConfiguration.Prototype = function() {
 DefaultConfiguration.prototype = new DefaultConfiguration.Prototype();
 module.exports = DefaultConfiguration;
 
-},{}],51:[function(require,module,exports){
+},{"underscore":212}],51:[function(require,module,exports){
 "use strict";
 
 var util = require("substance-util");
@@ -5454,10 +5460,12 @@ var ReaderView = function(readerCtrl) {
   // --------
   // 
 
+
   this.tocView = new TOC(this.readerCtrl);
 
   // Provisional Hack:
   // -----------------
+  // 
   // We sniff into the tocView to determine the default context based on how many 
   // headings are in the document
   // We show the TOC for headings.length > 2
@@ -5465,8 +5473,15 @@ var ReaderView = function(readerCtrl) {
   // Real solution: determine on the controller level wheter toc should be shown or not
 
   if (this.tocView.headings.length <= 2) {
+    var newCtx;
+    if (doc.get('figures').nodes.length > 0) {
+      newCtx = "figures";
+    } else {
+      newCtx = "info";
+    }
+
     this.readerCtrl.modifyState({
-      context: 'figures'
+      context: newCtx
     });
   }
 

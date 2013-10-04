@@ -440,12 +440,6 @@ Citations
   margin-bottom: 8px;
   color: rgba(255,255,255, 0.7);
 }
-
-/* One para per author */
-.lens-article .content-node.cover .authors .text:hover {
-  background: rgba(0,0,0,0.1);
-  color: #fff;
-}
 .content-node.supplement > .content {
   padding: 10px 20px;
 }
