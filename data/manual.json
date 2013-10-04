@@ -15,7 +15,7 @@
       "creator": "",
       "title": "",
       "abstract": "",
-      "published_on": "2013-10-02T00:39:29.826Z",
+      "published_on": "2013-10-04T15:57:36.482Z",
       "meta": {}
     },
     "content": {
@@ -48,56 +48,61 @@
         "text_16",
         "header_7",
         "text_17",
+        "text_18",
+        "codeblock_2",
+        "text_19",
         "header_8",
-        "list_2",
         "text_20",
         "header_9",
-        "text_21",
-        "codeblock_2",
-        "text_22",
-        "codeblock_3",
+        "list_2",
         "text_23",
-        "codeblock_4",
-        "text_24",
-        "codeblock_5",
-        "text_25",
         "header_10",
+        "text_24",
+        "codeblock_3",
+        "text_25",
+        "codeblock_4",
         "text_26",
-        "codeblock_6",
+        "codeblock_5",
         "text_27",
-        "codeblock_7",
-        "header_11",
+        "codeblock_6",
         "text_28",
-        "header_12",
+        "header_11",
         "text_29",
+        "codeblock_7",
         "text_30",
         "codeblock_8",
+        "header_12",
         "text_31",
-        "codeblock_9",
+        "header_13",
         "text_32",
         "text_33",
-        "codeblock_10",
-        "header_13",
+        "codeblock_9",
         "text_34",
+        "codeblock_10",
         "text_35",
-        "codeblock_11",
         "text_36",
+        "codeblock_11",
         "header_14",
         "text_37",
         "text_38",
         "codeblock_12",
         "text_39",
-        "codeblock_13",
+        "header_15",
         "text_40",
-        "codeblock_14",
         "text_41",
-        "codeblock_15",
+        "codeblock_13",
         "text_42",
-        "codeblock_16",
+        "codeblock_14",
         "text_43",
-        "codeblock_17",
+        "codeblock_15",
         "text_44",
-        "codeblock_18"
+        "codeblock_16",
+        "text_45",
+        "codeblock_17",
+        "text_46",
+        "codeblock_18",
+        "text_47",
+        "codeblock_19"
       ]
     },
     "text_1": {
@@ -268,7 +273,7 @@
       "type": "codeblock",
       "id": "codeblock_1",
       "source_id": "",
-      "content": "var importer = new LensImporter();\nvar doc = importer.import(xmlData);"
+      "content": "var importer = new LensImporter();\nvar doc = importer.import(xmlData, {\n  baseURL: \"http://docs.example.com/doc-25/\" // this path is used to resolve relative images\n});"
     },
     "text_16": {
       "type": "text",
@@ -279,336 +284,367 @@
     "header_7": {
       "type": "heading",
       "id": "header_7",
-      "source_id": "installation",
-      "content": "Installation",
+      "source_id": "website-integration",
+      "content": "Website Integration",
       "level": 1
     },
     "text_17": {
       "type": "text",
       "id": "text_17",
       "source_id": null,
-      "content": "It's fairly easy to install and run the latest Lens development version locally."
-    },
-    "header_8": {
-      "type": "heading",
-      "id": "header_8",
-      "source_id": "prerequisites",
-      "content": "Prerequisites",
-      "level": 2
+      "content": "The easiest way to integrate Lens into your website is by creating one HTML file per document and adapt the url to the document you want to display."
     },
     "text_18": {
       "type": "text",
       "id": "text_18",
       "source_id": null,
-      "content": "Node.js >=0.8.x"
+      "content": "Just take the contents from the bundled distribution, then adjust the document_url parameter in index.html."
+    },
+    "codeblock_2": {
+      "type": "codeblock",
+      "id": "codeblock_2",
+      "source_id": "",
+      "content": "var app = new Lens({\n  // Endpoint must have CORS enabled, or file is served from the same domain as the app\n  document_url: \"https://s3.amazonaws.com/elife-cdn/elife-articles/00778/elife00778.xml\"\n});"
     },
     "text_19": {
       "type": "text",
       "id": "text_19",
       "source_id": null,
-      "content": "Pandoc >= 1.12.x (for on-the-fly generation of the Lens manual from Markdown)"
+      "content": "Keep in mind, with eLife Lens you can display any NLM-compatible XML file or JSON documents that conforms to the Lens Article spec. You can enrich your HTML file with <meta> tags etc. to ensure Google crawlablility. There is no server infrastructure needed to run Lens. It's 100% browser-based. If you have questions please consult the Lens Mailinglist."
     },
-    "list_2": {
-      "type": "list",
-      "id": "list_2",
-      "source_id": "",
-      "items": [
-        "text_18",
-        "text_19"
-      ],
-      "ordered": false
+    "header_8": {
+      "type": "heading",
+      "id": "header_8",
+      "source_id": "installation-of-the-development-environment",
+      "content": "Installation of the development environment",
+      "level": 1
     },
     "text_20": {
       "type": "text",
       "id": "text_20",
       "source_id": null,
-      "content": "Node.js is just used as a development environment. You'll soon be able to create self-contained packages of individual modules or the main app itself."
+      "content": "It's fairly easy to install and run the latest Lens development environment locally."
     },
     "header_9": {
       "type": "heading",
       "id": "header_9",
-      "source_id": "fresh-install",
-      "content": "Fresh install",
+      "source_id": "prerequisites",
+      "content": "Prerequisites",
       "level": 2
     },
     "text_21": {
       "type": "text",
       "id": "text_21",
       "source_id": null,
-      "content": "First install the Substance Screwdriver command line utility. It's just a little helper that makes dealing with our many modules easier."
-    },
-    "codeblock_2": {
-      "type": "codeblock",
-      "id": "codeblock_2",
-      "source_id": "",
-      "content": "$ git clone https://github.com/substance/screwdriver.git\n$ cd screwdriver\n$ sudo python setup.py install"
+      "content": "Node.js >=0.8.x"
     },
     "text_22": {
       "type": "text",
       "id": "text_22",
       "source_id": null,
-      "content": "Clone the Lens Mothership"
+      "content": "Pandoc >= 1.12.02 (for on-the-fly generation of the Lens manual from Markdown)"
     },
-    "codeblock_3": {
-      "type": "codeblock",
-      "id": "codeblock_3",
+    "list_2": {
+      "type": "list",
+      "id": "list_2",
       "source_id": "",
-      "content": "$ git clone https://github.com/elifesciences/lens.git"
+      "items": [
+        "text_21",
+        "text_22"
+      ],
+      "ordered": false
     },
     "text_23": {
       "type": "text",
       "id": "text_23",
       "source_id": null,
-      "content": "Run the update command, which pulls in all the sub-modules and dependencies"
+      "content": "Node.js is just used as a development environment. You'll soon be able to create self-contained packages of individual modules or the main app itself."
     },
-    "codeblock_4": {
-      "type": "codeblock",
-      "id": "codeblock_4",
-      "source_id": "",
-      "content": "$ cd lens\n$ substance --update"
+    "header_10": {
+      "type": "heading",
+      "id": "header_10",
+      "source_id": "fresh-install",
+      "content": "Fresh install",
+      "level": 2
     },
     "text_24": {
       "type": "text",
       "id": "text_24",
       "source_id": null,
-      "content": "Finally start the server"
+      "content": "First install the Substance Screwdriver command line utility. It's just a little helper that makes dealing with our many modules easier."
     },
-    "codeblock_5": {
+    "codeblock_3": {
       "type": "codeblock",
-      "id": "codeblock_5",
+      "id": "codeblock_3",
       "source_id": "",
-      "content": "$ substance"
+      "content": "$ git clone https://github.com/substance/screwdriver.git\n$ cd screwdriver\n$ sudo python setup.py install"
     },
     "text_25": {
       "type": "text",
       "id": "text_25",
       "source_id": null,
-      "content": "You can have a look at the example document, by pointing your browser to http://localhost:4000/#lens/lorem_ipsum, view the autogenerated Lens.Article documentation here http://localhost:4000/#lens/lens_article or the manual http://localhost:4000/#lens/manual."
+      "content": "Clone the Lens Mothership"
     },
-    "header_10": {
-      "type": "heading",
-      "id": "header_10",
-      "source_id": "keep-your-local-version-in-sync",
-      "content": "Keep your local version in sync",
-      "level": 2
+    "codeblock_4": {
+      "type": "codeblock",
+      "id": "codeblock_4",
+      "source_id": "",
+      "content": "$ git clone https://github.com/elifesciences/lens.git"
     },
     "text_26": {
       "type": "text",
       "id": "text_26",
       "source_id": null,
-      "content": "You may want to pull in updates every now and then, which is simple. In the Lens project root dir do:"
+      "content": "Run the update command, which pulls in all the sub-modules and dependencies"
     },
-    "codeblock_6": {
+    "codeblock_5": {
       "type": "codeblock",
-      "id": "codeblock_6",
+      "id": "codeblock_5",
       "source_id": "",
-      "content": "$ substance --update"
+      "content": "$ cd lens\n$ substance --update"
     },
     "text_27": {
       "type": "text",
       "id": "text_27",
       "source_id": null,
-      "content": "And start the dev environment again."
+      "content": "Finally start the server"
     },
-    "codeblock_7": {
+    "codeblock_6": {
       "type": "codeblock",
-      "id": "codeblock_7",
+      "id": "codeblock_6",
       "source_id": "",
       "content": "$ substance"
-    },
-    "header_11": {
-      "type": "heading",
-      "id": "header_11",
-      "source_id": "configuration",
-      "content": "Configuration",
-      "level": 2
     },
     "text_28": {
       "type": "text",
       "id": "text_28",
       "source_id": null,
-      "content": "By default your local Lens installations serves a bunch of example documents plus Lens related documents. However you can easily configure Lens so it fetches content from a different source by adapting config/config.json to your needs."
+      "content": "You can have a look at the example document, by pointing your browser to http://localhost:4000/#lens/lorem_ipsum, view the autogenerated Lens.Article documentation here http://localhost:4000/#lens/lens_article or the manual http://localhost:4000/#lens/manual."
     },
-    "header_12": {
+    "header_11": {
       "type": "heading",
-      "id": "header_12",
-      "source_id": "contributing",
-      "content": "Contributing",
-      "level": 1
+      "id": "header_11",
+      "source_id": "keep-your-local-version-in-sync",
+      "content": "Keep your local version in sync",
+      "level": 2
     },
     "text_29": {
       "type": "text",
       "id": "text_29",
       "source_id": null,
-      "content": "I'm assuming here that you have push access to the repositories, because as a start I'd like to get the Lens core dev team up and running. I'll provide documentation on how to work with a forked version of a module and submit a pull request soon."
+      "content": "You may want to pull in updates every now and then, which is simple. In the Lens project root dir do:"
+    },
+    "codeblock_7": {
+      "type": "codeblock",
+      "id": "codeblock_7",
+      "source_id": "",
+      "content": "$ substance --update"
     },
     "text_30": {
       "type": "text",
       "id": "text_30",
       "source_id": null,
-      "content": "Say you've made changes to the Lens.Article module. In order to commit them you simply have to navigate to node_modules/lens-article and do:"
+      "content": "And start the dev environment again."
     },
     "codeblock_8": {
       "type": "codeblock",
       "id": "codeblock_8",
       "source_id": "",
-      "content": "$ git add <YOUR STUFF>\n$ git commit -m \"Fixed X\"\n$ git push"
+      "content": "$ substance"
+    },
+    "header_12": {
+      "type": "heading",
+      "id": "header_12",
+      "source_id": "configuration",
+      "content": "Configuration",
+      "level": 2
     },
     "text_31": {
       "type": "text",
       "id": "text_31",
       "source_id": null,
-      "content": "Alternatively, if you are working on breaking changes you can switch to a different branch, and submit a pull request using the Github interface. Here's how:"
+      "content": "By default your local Lens installations serves a bunch of example documents plus Lens related documents. However you can easily configure Lens so it fetches content from a different source by adapting config/config.json to your needs."
     },
-    "codeblock_9": {
-      "type": "codeblock",
-      "id": "codeblock_9",
-      "source_id": "",
-      "content": "$ git checkout -b my_feature_branch\n$ git add <YOUR STUFF>\n$ git commit -m \"Fixed X\"\n$ git push"
+    "header_13": {
+      "type": "heading",
+      "id": "header_13",
+      "source_id": "contributing",
+      "content": "Contributing",
+      "level": 1
     },
     "text_32": {
       "type": "text",
       "id": "text_32",
       "source_id": null,
-      "content": "Then go to Github and submit a pull request."
+      "content": "I'm assuming here that you have push access to the repositories, because as a start I'd like to get the Lens core dev team up and running. I'll provide documentation on how to work with a forked version of a module and submit a pull request soon."
     },
     "text_33": {
       "type": "text",
       "id": "text_33",
       "source_id": null,
-      "content": "Another hint: To pull in upstream changes from master for the entire project do this:"
+      "content": "Say you've made changes to the Lens.Article module. In order to commit them you simply have to navigate to node_modules/lens-article and do:"
     },
-    "codeblock_10": {
+    "codeblock_9": {
       "type": "codeblock",
-      "id": "codeblock_10",
+      "id": "codeblock_9",
       "source_id": "",
-      "content": "$ substance --git -- pull origin master:<feature_branch_name>"
-    },
-    "header_13": {
-      "type": "heading",
-      "id": "header_13",
-      "source_id": "adjusting-styles",
-      "content": "Adjusting styles",
-      "level": 2
+      "content": "$ git add <YOUR STUFF>\n$ git commit -m \"Fixed X\"\n$ git push"
     },
     "text_34": {
       "type": "text",
       "id": "text_34",
       "source_id": null,
-      "content": "Most customization can be done using CSS without interfering with the Lens codebase. You only override styles on the application level."
+      "content": "Alternatively, if you are working on breaking changes you can switch to a different branch, and submit a pull request using the Github interface. Here's how:"
+    },
+    "codeblock_10": {
+      "type": "codeblock",
+      "id": "codeblock_10",
+      "source_id": "",
+      "content": "$ git checkout -b my_feature_branch\n$ git add <YOUR STUFF>\n$ git commit -m \"Fixed X\"\n$ git push"
     },
     "text_35": {
       "type": "text",
       "id": "text_35",
       "source_id": null,
-      "content": "Say you'd like to like to color citation cards red."
-    },
-    "codeblock_11": {
-      "type": "codeblock",
-      "id": "codeblock_11",
-      "source_id": "",
-      "content": "#my_app .article .citations .resource-header {\n  background: red;\n}"
+      "content": "Then go to Github and submit a pull request."
     },
     "text_36": {
       "type": "text",
       "id": "text_36",
       "source_id": null,
-      "content": "You've got the basic idea, now it's on you. It should be easy to pull in changes from the official Lens modules, without breaking your customized app."
+      "content": "Another hint: To pull in upstream changes from master for the entire project do this:"
+    },
+    "codeblock_11": {
+      "type": "codeblock",
+      "id": "codeblock_11",
+      "source_id": "",
+      "content": "$ substance --git -- pull origin master:<feature_branch_name>"
     },
     "header_14": {
       "type": "heading",
       "id": "header_14",
-      "source_id": "implement-a-new-node-type",
-      "content": "Implement a new node type",
+      "source_id": "adjusting-styles",
+      "content": "Adjusting styles",
       "level": 2
     },
     "text_37": {
       "type": "text",
       "id": "text_37",
       "source_id": null,
-      "content": "It doesn't take much to implement a new node type for Lens. However, make sure there isn't an existing node type that covers your needs. We would prefer that you adjust existing types and contribute back. If we'd all figure out a way to find common ground in our scientific language that would be awesome. :)"
+      "content": "Most customization can be done using CSS without interfering with the Lens codebase. You only override styles on the application level."
     },
     "text_38": {
       "type": "text",
       "id": "text_38",
       "source_id": null,
-      "content": "Anyway, let's create a new node type now. For the purpose of demonstration only, let's create a cat node type that you can reference in the main body of the document. The first thing to do is create a new folder in the lens-article repository /nodes/cat. The structure of that folder will be like this:"
+      "content": "Say you'd like to like to color citation cards red."
     },
     "codeblock_12": {
       "type": "codeblock",
       "id": "codeblock_12",
       "source_id": "",
-      "content": "index.js\ncat.js\ncat_view.js\ncat.css"
+      "content": "#my_app .article .citations .resource-header {\n  background: red;\n}"
     },
     "text_39": {
       "type": "text",
       "id": "text_39",
       "source_id": null,
-      "content": "Let's start by specifying the type definitions in cat.js."
+      "content": "You've got the basic idea, now it's on you. It should be easy to pull in changes from the official Lens modules, without breaking your customized app."
     },
-    "codeblock_13": {
-      "type": "codeblock",
-      "id": "codeblock_13",
-      "source_id": "",
-      "content": "var _ = require('underscore');\nvar Node = require('substance-document').Node;\n\nvar Cat = function(node, doc) {\n  Node.call(this, node, doc);\n};\n\n// Type definition\n// -----------------\n//\n\nCat.type = {\n  \"id\": \"cat\",\n  \"parent\": \"figure\",\n  \"properties\": {\n    \"name\": \"string\",\n    \"speed\": \"string\",\n    \"abilities\": [\"array\", \"string\"],\n  }\n};\n\nCat.prototype = Node.prototype\nCat.prototype.constructor = Cat;\n\n\n// Auto-generate property getters based on the type definition \n// --------\n\nvar getters = {};\n\n_.each(Cat.type.properties, function(prop, key) {\n  getters[key] = {\n    get: function() {\n      return this.properties[key];\n    }\n  };\n});\n\n\nObject.defineProperties(Cat.prototype, _.extend(getters, {\n  caption: {\n    // Used for \n    heading: function() {\n      return this.properties.\n    }\n  }\n}));\n\nmodule.exports = Cat;"
+    "header_15": {
+      "type": "heading",
+      "id": "header_15",
+      "source_id": "implement-a-new-node-type",
+      "content": "Implement a new node type",
+      "level": 2
     },
     "text_40": {
       "type": "text",
       "id": "text_40",
       "source_id": null,
-      "content": "That was easy. Now we need to implement a view for the Cat model we just defined. Here is cat_view.js."
-    },
-    "codeblock_14": {
-      "type": "codeblock",
-      "id": "codeblock_14",
-      "source_id": "",
-      "content": "var NodeView = require(\"../node\").View;\n\nvar CatView = function(node) {\n  NodeView.call(this, node);\n\n  this.$el.attr({id: node.id});\n  this.$el.addClass(\"content-node cat\");\n};\n\nCatView.Prototype = function() {\n\n  this.render = function() {\n    NodeView.prototype.render.call(this);\n    var node = this.node;\n\n    var html = [\n      '<div class=\"name\">'+this.cat+'</div>'\n      '<div class=\"speed\">'+this.speed+'</div>'\n      '<div class=\"abilities\">'+this.abilities.join(', ')+'</div>'\n    ].join('\\n');\n\n    this.content.innerHTML = html;\n\n    return this;\n  }\n};\n\n// CatView inherits from NodeView\nCatView.Prototype.prototype = NodeView.prototype;\nCatView.prototype = new CatView.Prototype();\n\nmodule.exports = CatView;"
+      "content": "It doesn't take much to implement a new node type for Lens. However, make sure there isn't an existing node type that covers your needs. We would prefer that you adjust existing types and contribute back. If we'd all figure out a way to find common ground in our scientific language that would be awesome. :)"
     },
     "text_41": {
       "type": "text",
       "id": "text_41",
       "source_id": null,
-      "content": "Add some styles in cat.css:"
+      "content": "Anyway, let's create a new node type now. For the purpose of demonstration only, let's create a cat node type that you can reference in the main body of the document. The first thing to do is create a new folder in the lens-article repository /nodes/cat. The structure of that folder will be like this:"
     },
-    "codeblock_15": {
+    "codeblock_13": {
       "type": "codeblock",
-      "id": "codeblock_15",
+      "id": "codeblock_13",
       "source_id": "",
-      "content": ".content-node.cat .name {\n  font-size: 20px;\n  color: green;\n}"
+      "content": "index.js\ncat.js\ncat_view.js\ncat.css"
     },
     "text_42": {
       "type": "text",
       "id": "text_42",
       "source_id": null,
-      "content": "By convention, there needs to be an index.js file in the repo."
+      "content": "Let's start by specifying the type definitions in cat.js."
     },
-    "codeblock_16": {
+    "codeblock_14": {
       "type": "codeblock",
-      "id": "codeblock_16",
+      "id": "codeblock_14",
       "source_id": "",
-      "content": "module.exports = {\n  Model: require('./cat'),\n  View: require('./cat_view')\n};"
+      "content": "var _ = require('underscore');\nvar Node = require('substance-document').Node;\n\nvar Cat = function(node, doc) {\n  Node.call(this, node, doc);\n};\n\n// Type definition\n// -----------------\n//\n\nCat.type = {\n  \"id\": \"cat\",\n  \"parent\": \"figure\",\n  \"properties\": {\n    \"name\": \"string\",\n    \"speed\": \"string\",\n    \"abilities\": [\"array\", \"string\"],\n  }\n};\n\nCat.prototype = Node.prototype\nCat.prototype.constructor = Cat;\n\n\n// Auto-generate property getters based on the type definition \n// --------\n\nvar getters = {};\n\n_.each(Cat.type.properties, function(prop, key) {\n  getters[key] = {\n    get: function() {\n      return this.properties[key];\n    }\n  };\n});\n\n\nObject.defineProperties(Cat.prototype, _.extend(getters, {\n  caption: {\n    // Used for \n    heading: function() {\n      return this.properties.\n    }\n  }\n}));\n\nmodule.exports = Cat;"
     },
     "text_43": {
       "type": "text",
       "id": "text_43",
       "source_id": null,
-      "content": "Finally you have to register your new node type in nodes/index.js."
+      "content": "That was easy. Now we need to implement a view for the Cat model we just defined. Here is cat_view.js."
     },
-    "codeblock_17": {
+    "codeblock_15": {
       "type": "codeblock",
-      "id": "codeblock_17",
+      "id": "codeblock_15",
       "source_id": "",
-      "content": "module.exports = {\n  ...\n  \"cat\": require(\"./cat\"),\n  ...\n};"
+      "content": "var NodeView = require(\"../node\").View;\n\nvar CatView = function(node) {\n  NodeView.call(this, node);\n\n  this.$el.attr({id: node.id});\n  this.$el.addClass(\"content-node cat\");\n};\n\nCatView.Prototype = function() {\n\n  this.render = function() {\n    NodeView.prototype.render.call(this);\n    var node = this.node;\n\n    var html = [\n      '<div class=\"name\">'+this.cat+'</div>'\n      '<div class=\"speed\">'+this.speed+'</div>'\n      '<div class=\"abilities\">'+this.abilities.join(', ')+'</div>'\n    ].join('\\n');\n\n    this.content.innerHTML = html;\n\n    return this;\n  }\n};\n\n// CatView inherits from NodeView\nCatView.Prototype.prototype = NodeView.prototype;\nCatView.prototype = new CatView.Prototype();\n\nmodule.exports = CatView;"
     },
     "text_44": {
       "type": "text",
       "id": "text_44",
       "source_id": null,
-      "content": "Now in your actual document, you can specify and reference cat resources. It looks like so:"
+      "content": "Add some styles in cat.css:"
+    },
+    "codeblock_16": {
+      "type": "codeblock",
+      "id": "codeblock_16",
+      "source_id": "",
+      "content": ".content-node.cat .name {\n  font-size: 20px;\n  color: green;\n}"
+    },
+    "text_45": {
+      "type": "text",
+      "id": "text_45",
+      "source_id": null,
+      "content": "By convention, there needs to be an index.js file in the repo."
+    },
+    "codeblock_17": {
+      "type": "codeblock",
+      "id": "codeblock_17",
+      "source_id": "",
+      "content": "module.exports = {\n  Model: require('./cat'),\n  View: require('./cat_view')\n};"
+    },
+    "text_46": {
+      "type": "text",
+      "id": "text_46",
+      "source_id": null,
+      "content": "Finally you have to register your new node type in nodes/index.js."
     },
     "codeblock_18": {
       "type": "codeblock",
       "id": "codeblock_18",
+      "source_id": "",
+      "content": "module.exports = {\n  ...\n  \"cat\": require(\"./cat\"),\n  ...\n};"
+    },
+    "text_47": {
+      "type": "text",
+      "id": "text_47",
+      "source_id": null,
+      "content": "Now in your actual document, you can specify and reference cat resources. It looks like so:"
+    },
+    "codeblock_19": {
+      "type": "codeblock",
+      "id": "codeblock_19",
       "source_id": "",
       "content": "{\n  id: \"example_doc\",\n  \"nodes\": {\n    ...\n    \"oliver\": {\n      \"id\": \"oliver\"\n      \"type\": \"cat\",\n      \"name\": \"Oliver\",\n      \"abilities\": [\"jump high\", \"eat much\", \"bite\", \"hunt mice\"],\n    },\n    \"paragraph_1\": {\n      \"id\": \"paragraph_1\",\n      \"type\": \"paragraph\",\n      \"content\": \"Last sunday I had much fun with Oliver the cat.\"\n    },\n    \"figure_reference_oliver\": {\n      \"id\":\"figure_reference_oliver\",\n      \"type\":\"figure_reference\",\n      \"path\": [\"paragraph_3\", \"content\"],\n      \"target\": \"oliver\",\n      \"range\":[31,37]\n    },\n    ...\n  }\n}"
     },
@@ -875,6 +911,42 @@
       ],
       "url": "https://github.com/elifesciences/lens-converter/blob/0.1.x/src/configurations/plos.js"
     },
+    "code_11": {
+      "type": "code",
+      "id": "code_11",
+      "path": [
+        "text_18",
+        "content"
+      ],
+      "range": [
+        70,
+        82
+      ]
+    },
+    "code_12": {
+      "type": "code",
+      "id": "code_12",
+      "path": [
+        "text_18",
+        "content"
+      ],
+      "range": [
+        96,
+        106
+      ]
+    },
+    "code_13": {
+      "type": "code",
+      "id": "code_13",
+      "path": [
+        "text_19",
+        "content"
+      ],
+      "range": [
+        167,
+        173
+      ]
+    },
     "link_12": {
       "type": "link",
       "id": "link_12",
@@ -883,46 +955,23 @@
         "content"
       ],
       "range": [
+        336,
+        352
+      ],
+      "url": "https://groups.google.com/forum/#!forum/elife-lens"
+    },
+    "link_13": {
+      "type": "link",
+      "id": "link_13",
+      "path": [
+        "text_22",
+        "content"
+      ],
+      "range": [
         0,
         6
       ],
       "url": "http://johnmacfarlane.net/pandoc/installing.html"
-    },
-    "code_11": {
-      "type": "code",
-      "id": "code_11",
-      "path": [
-        "text_25",
-        "content"
-      ],
-      "range": [
-        73,
-        112
-      ]
-    },
-    "code_12": {
-      "type": "code",
-      "id": "code_12",
-      "path": [
-        "text_25",
-        "content"
-      ],
-      "range": [
-        169,
-        209
-      ]
-    },
-    "code_13": {
-      "type": "code",
-      "id": "code_13",
-      "path": [
-        "text_25",
-        "content"
-      ],
-      "range": [
-        224,
-        258
-      ]
     },
     "code_14": {
       "type": "code",
@@ -932,15 +981,51 @@
         "content"
       ],
       "range": [
-        202,
-        220
+        73,
+        112
       ]
     },
     "code_15": {
       "type": "code",
       "id": "code_15",
       "path": [
-        "text_30",
+        "text_28",
+        "content"
+      ],
+      "range": [
+        169,
+        209
+      ]
+    },
+    "code_16": {
+      "type": "code",
+      "id": "code_16",
+      "path": [
+        "text_28",
+        "content"
+      ],
+      "range": [
+        224,
+        258
+      ]
+    },
+    "code_17": {
+      "type": "code",
+      "id": "code_17",
+      "path": [
+        "text_31",
+        "content"
+      ],
+      "range": [
+        202,
+        220
+      ]
+    },
+    "code_18": {
+      "type": "code",
+      "id": "code_18",
+      "path": [
+        "text_33",
         "content"
       ],
       "range": [
@@ -948,11 +1033,11 @@
         132
       ]
     },
-    "link_13": {
+    "link_14": {
       "type": "link",
-      "id": "link_13",
+      "id": "link_14",
       "path": [
-        "text_32",
+        "text_35",
         "content"
       ],
       "range": [
@@ -961,11 +1046,11 @@
       ],
       "url": "http://github.com"
     },
-    "code_16": {
+    "code_19": {
       "type": "code",
-      "id": "code_16",
+      "id": "code_19",
       "path": [
-        "text_38",
+        "text_41",
         "content"
       ],
       "range": [
@@ -973,11 +1058,11 @@
         99
       ]
     },
-    "code_17": {
+    "code_20": {
       "type": "code",
-      "id": "code_17",
+      "id": "code_20",
       "path": [
-        "text_38",
+        "text_41",
         "content"
       ],
       "range": [
@@ -985,11 +1070,11 @@
         231
       ]
     },
-    "code_18": {
+    "code_21": {
       "type": "code",
-      "id": "code_18",
+      "id": "code_21",
       "path": [
-        "text_38",
+        "text_41",
         "content"
       ],
       "range": [
@@ -997,11 +1082,11 @@
         253
       ]
     },
-    "code_19": {
+    "code_22": {
       "type": "code",
-      "id": "code_19",
+      "id": "code_22",
       "path": [
-        "text_39",
+        "text_42",
         "content"
       ],
       "range": [
@@ -1009,52 +1094,16 @@
         56
       ]
     },
-    "code_20": {
+    "code_23": {
       "type": "code",
-      "id": "code_20",
+      "id": "code_23",
       "path": [
-        "text_40",
+        "text_43",
         "content"
       ],
       "range": [
         55,
         58
-      ]
-    },
-    "code_21": {
-      "type": "code",
-      "id": "code_21",
-      "path": [
-        "text_40",
-        "content"
-      ],
-      "range": [
-        90,
-        101
-      ]
-    },
-    "code_22": {
-      "type": "code",
-      "id": "code_22",
-      "path": [
-        "text_41",
-        "content"
-      ],
-      "range": [
-        19,
-        26
-      ]
-    },
-    "code_23": {
-      "type": "code",
-      "id": "code_23",
-      "path": [
-        "text_42",
-        "content"
-      ],
-      "range": [
-        36,
-        44
       ]
     },
     "code_24": {
@@ -1065,8 +1114,8 @@
         "content"
       ],
       "range": [
-        51,
-        65
+        90,
+        101
       ]
     },
     "code_25": {
@@ -1074,6 +1123,42 @@
       "id": "code_25",
       "path": [
         "text_44",
+        "content"
+      ],
+      "range": [
+        19,
+        26
+      ]
+    },
+    "code_26": {
+      "type": "code",
+      "id": "code_26",
+      "path": [
+        "text_45",
+        "content"
+      ],
+      "range": [
+        36,
+        44
+      ]
+    },
+    "code_27": {
+      "type": "code",
+      "id": "code_27",
+      "path": [
+        "text_46",
+        "content"
+      ],
+      "range": [
+        51,
+        65
+      ]
+    },
+    "code_28": {
+      "type": "code",
+      "id": "code_28",
+      "path": [
+        "text_47",
         "content"
       ],
       "range": [
