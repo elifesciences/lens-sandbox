@@ -968,7 +968,11 @@ Caption.description = {
 //
 
 Caption.example = {
-  "no_example": "yet"
+  "id": "caption_1",
+  "children": [
+    "paragraph_1",
+    "paragraph_2"
+  ]
 };
 
 Caption.Prototype = function() {
@@ -1509,7 +1513,10 @@ Figure.description = {
 //
 
 Figure.example = {
-  "no_example": "yet"
+  "id": "figure_1",
+  "label": "Figure 1",
+  "url": "http://example.com/fig1.png",
+  "caption": "caption_1"
 };
 
 Figure.Prototype = function() {
@@ -2879,15 +2886,6 @@ ElifeConfiguration.Prototype = function() {
     var graphic = element.querySelector("graphic");
     var url = graphic.getAttribute("xlink:href");
 
-    // Example url to SVG: http://cdn.elifesciences.org/elife-articles/00768/svg/elife00768f001.svg
-    // url = [
-    //   "http://cdn.elifesciences.org/elife-articles/",
-    //   state.doc.id,
-    //   "/svg/",
-    //   url,
-    //   ".svg"
-    // ].join('');
-
     node.url = this.resolveURL(state, url);
   };
 
@@ -2917,7 +2915,7 @@ ElifeConfiguration.Prototype = function() {
     node.url = [
       "http://cdn.elifesciences.org/elife-articles/",
       state.doc.id,
-      "/supplements/",
+      "/suppl/",
       node.url
     ].join('');
   };
@@ -20790,7 +20788,7 @@ ImageNode.type = {
 ImageNode.example = {
   "type": "image",
   "id": "image_1",
-  "url": "http://elife.elifesciences.org/content/elife/1/e00311/F3.medium.gif"
+  "url": "http://substance.io/image_1.png"
 };
 
 // This is used for the auto-generated docs
@@ -29126,7 +29124,6 @@ LensView.Prototype = function() {
     this.replaceMainView('test_center', view);
   };
 
-
   // Rendering
   // ==========================================================================
   //
@@ -29138,6 +29135,8 @@ LensView.Prototype = function() {
     //   console.log('disposing it..');
     //   this.mainView.dispose();
     // }
+
+    this.$('.loading').hide();
 
     this.mainView = view;
     this.$('#main').html(view.render().el);

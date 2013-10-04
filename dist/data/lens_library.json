@@ -2908,7 +2908,9 @@
             ], 
             "type": "collection", 
             "id": "examples", 
-            "name": "Examples"
+            "name": "Examples",
+            "description": "A corpus of example articles from eLife in order to test the Lens interface",
+            "image": "http://f.cl.ly/items/1h453d1H2M3Q3u1T1U0W/elife-full-color-horizontal.png"
         }, 
         "00573": {
             "url": "https://s3.amazonaws.com/elife-cdn/elife-articles/00573/elife00573.xml", 

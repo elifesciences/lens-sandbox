@@ -15,7 +15,7 @@
       "creator": "",
       "title": "",
       "abstract": "",
-      "published_on": "2013-10-04T15:57:36.482Z",
+      "published_on": "2013-10-04T17:25:42.722Z",
       "meta": {}
     },
     "content": {
@@ -273,7 +273,7 @@
       "type": "codeblock",
       "id": "codeblock_1",
       "source_id": "",
-      "content": "var importer = new LensImporter();\nvar doc = importer.import(xmlData, {\n  baseURL: \"http://docs.example.com/doc-25/\" // this path is used to resolve relative images\n});"
+      "content": "var importer = new LensImporter();\nvar doc = importer.import(xmlData, {\n  // this path is used to resolve relative figure urls\n  baseURL: \"http://docs.example.com/doc-25/\"\n});"
     },
     "text_16": {
       "type": "text",
@@ -298,7 +298,7 @@
       "type": "text",
       "id": "text_18",
       "source_id": null,
-      "content": "Just take the contents from the bundled distribution, then adjust the document_url parameter in index.html."
+      "content": "Just take the contents from the bundled distribution here, then adjust the document_url parameter in index.html."
     },
     "codeblock_2": {
       "type": "codeblock",
@@ -315,8 +315,8 @@
     "header_8": {
       "type": "heading",
       "id": "header_8",
-      "source_id": "installation-of-the-development-environment",
-      "content": "Installation of the development environment",
+      "source_id": "development-setup",
+      "content": "Development Setup",
       "level": 1
     },
     "text_20": {
@@ -911,6 +911,19 @@
       ],
       "url": "https://github.com/elifesciences/lens-converter/blob/0.1.x/src/configurations/plos.js"
     },
+    "link_12": {
+      "type": "link",
+      "id": "link_12",
+      "path": [
+        "text_18",
+        "content"
+      ],
+      "range": [
+        32,
+        52
+      ],
+      "url": "https://github.com/elifesciences/lens-elife/archive/gh-pages.zip"
+    },
     "code_11": {
       "type": "code",
       "id": "code_11",
@@ -919,8 +932,8 @@
         "content"
       ],
       "range": [
-        70,
-        82
+        75,
+        87
       ]
     },
     "code_12": {
@@ -931,8 +944,8 @@
         "content"
       ],
       "range": [
-        96,
-        106
+        101,
+        111
       ]
     },
     "code_13": {
@@ -947,9 +960,9 @@
         173
       ]
     },
-    "link_12": {
+    "link_13": {
       "type": "link",
-      "id": "link_12",
+      "id": "link_13",
       "path": [
         "text_19",
         "content"
@@ -960,9 +973,9 @@
       ],
       "url": "https://groups.google.com/forum/#!forum/elife-lens"
     },
-    "link_13": {
+    "link_14": {
       "type": "link",
-      "id": "link_13",
+      "id": "link_14",
       "path": [
         "text_22",
         "content"
@@ -1033,9 +1046,9 @@
         132
       ]
     },
-    "link_14": {
+    "link_15": {
       "type": "link",
-      "id": "link_14",
+      "id": "link_15",
       "path": [
         "text_35",
         "content"

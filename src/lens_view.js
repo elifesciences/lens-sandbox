@@ -121,7 +121,6 @@ LensView.Prototype = function() {
     this.replaceMainView('test_center', view);
   };
 
-
   // Rendering
   // ==========================================================================
   //
@@ -133,6 +132,8 @@ LensView.Prototype = function() {
     //   console.log('disposing it..');
     //   this.mainView.dispose();
     // }
+
+    this.$('.loading').hide();
 
     this.mainView = view;
     this.$('#main').html(view.render().el);
