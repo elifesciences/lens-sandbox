@@ -251,7 +251,7 @@
       <label>Figure 3.</label>
       <caption>
         <title>Focus on a Figure</title>
-        <p>Selecting a figure label within the text. The green highlighted camera is a quick link to view all of the figures that are referenced within the selected paragraph. The black arrow to the left of the document map is a visual cue for the reader to quickly return to the paragraph they were on if they navigate away from this to another paragraph that references Figure 5. The reader can select the figure or reference label in the resources panel (Figure 2C) to focus on the paragraphs where a specific figure is mentioned. The document map (Figure 2A) will highlight the paragraphs that reference the selected resource.</p>
+        <p>Selecting a figure label within the text will bring that figure into view within the resources panel. The document map (<xref ref-type="fig" rid="fig2">Figure 2A</xref>) will identify all of the other references to that figure by highlighting the paragraphs green.</p> 
       </caption>
       <graphic xlink:href="figure_3.png"/>
     </fig>
@@ -259,8 +259,8 @@
     <fig id="fig4">
       <label>Figure 4.</label>
       <caption>
-        <title>Focus on a Reference</title>
-        <p>Insert Figure 4 caption ...</p>
+        <title>Focus on a Citation</title>
+        <p>Selecting a citation label within the text will bring that citation into view within the resources panel. The document map (<xref ref-type="fig" rid="fig2">Figure 2A</xref>) will identify all of the other references to that citation by highlighting the paragraphs blue.</p>
       </caption>
       <graphic xlink:href="figure_4.png"/>
     </fig>
