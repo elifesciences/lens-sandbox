@@ -232,8 +232,8 @@
     <fig id="fig1">
       <label>Figure 1.</label>
       <caption>
-        <title>The Lens Document Format</title>
-        <p>An example of how to begin creating content for Lens. The backbone organizes all of the data in a readily accessible manner. The text node defines the paragraph that may reference figures or publications. The figure node defines the image that will be displayed while the annotation links the figure to the associated text node that references the figure.</p>
+        <title>The Lens Article Format</title>
+        <p>An example of how to begin creating content for Lens. The backbone organizes all of the data in a readily accessible manner. The text node defines the paragraph that may reference figures or publications. The figure node defines the image that will be displayed while the annotation links the figure to the associated text node that references the figure. See the <ext-link xlink:href="http://lens.substance.io/#lens/lens_article">Lens Article Format</ext-link> for a more detailed explanation of all the possible node types.</p>
       </caption>
       <graphic xlink:href="figure_1.png"/>
     </fig>
