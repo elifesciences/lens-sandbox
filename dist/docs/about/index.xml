@@ -197,8 +197,8 @@
       <title>The Presentation of Lens</title>
       <p>When designing Lens, we worked to provide a flexible experience that supports a variety of use cases. On the far left the document map (<xref ref-type="fig" rid="fig2">Figure 2A</xref>) identifies the readers position in the context of the whole article. It also outlines each paragraph in the article. The left panel includes all of the textual content of the article (<xref ref-type="fig" rid="fig2">Figure 2B</xref>). The right panel includes the resources (<xref ref-type="fig" rid="fig2">Figure 2C</xref>). The resources are defined as the table of contents, figures, tables, videos, supplemental data, references and information about the article. By splitting apart the content into individual panels, we enable the reader to focus on multiple content bits at the same time.</p>
       <p>When reading scientific articles, it is rare for a reader to read straight through the text and figures in order. Instead, they may look to get a quick overview of the paper by looking at the figures first. By splitting the figures out from the text, the reader can transition between the two independently of one another. This allows the reader to simultaneously view exactly the content they want to focus on at that moment.</p>
-      <p>Two viewing modes that are implicitly supported are text-centric and resource-centric viewing. Text-centric viewing creates a microscale reading experience by limiting the viewable content to a singular content node. When a figure or publication label is selected within a text node, only the figures or publications that are referenced within that paragraph will be displayed in their appropriate resource sections (<xref rid="fig3" ref-type="fig">Figure 3</xref>, <xref rid="fig4" ref-type="fig">Figure 4</xref>). Selection of any figure or publication will color the paragraphs in the document map (<xref rid="fig2" ref-type="fig">Figure 2A</xref>) that include a reference to the selected resource.</p>
-      <p>The presentation of the article information has also been redesigned to organize the information in a uniform way. Each publisher will have information like the author’s impact statement, article keywords, major dataset links, etc. placed in different positions of their HTML or PDF versions of the articles. The aim is to distill all of the article information into organized subsections that can be displayed together on individual cards. The information cards create a uniform viewing experience making it easy to quickly find what the reader is looking for.</p>
+<!--      <p>Two viewing modes that are implicitly supported are text-centric and resource-centric viewing. Text-centric viewing creates a microscale reading experience by limiting the viewable content to a singular content node. When a figure or publication label is selected within a text node, only the figures or publications that are referenced within that paragraph will be displayed in their appropriate resource sections (<xref rid="fig3" ref-type="fig">Figure 3</xref>, <xref rid="fig4" ref-type="fig">Figure 4</xref>). Selection of any figure or publication will color the paragraphs in the document map (<xref rid="fig2" ref-type="fig">Figure 2A</xref>) that include a reference to the selected resource.</p>
+-->      <p>The presentation of the article information has also been redesigned to organize the information in a uniform way. Each publisher will have information like the author’s impact statement, article keywords, major dataset links, etc. placed in different positions of their HTML or PDF versions of the articles. The aim is to distill all of the article information into organized subsections that can be displayed together on individual cards. The information cards create a uniform viewing experience making it easy to quickly find what the reader is looking for.</p>
       <p>In addition to simplifying the reading experience of research articles, Lens also provides useful tools to share content with others. Each of the content nodes in the data structure are deep-linked which means that each state is defined by a given URL. Sharing a specific URL will take the new reader to the exact same state in their browser which will facilitate the ease discussions about the content.</p>
     </sec>
 
@@ -232,8 +232,8 @@
     <fig id="fig1">
       <label>Figure 1.</label>
       <caption>
-        <title>Insert Figure 1 caption</title>
-        <p>Insert Figure 1 caption ...</p>
+        <title>The Lens Article Format</title>
+        <p>An example of how to begin creating content for Lens. The backbone organizes all of the data in a readily accessible manner. The text node defines the paragraph that may reference figures or publications. The figure node defines the image that will be displayed while the annotation links the figure to the associated text node that references the figure. See the <ext-link xlink:href="http://lens.substance.io/#lens/lens_article">Lens Article Format</ext-link> for a more detailed explanation of all the possible node types.</p>
       </caption>
       <graphic xlink:href="figure_1.png"/>
     </fig>
@@ -250,16 +250,16 @@
     <fig id="fig3">
       <label>Figure 3.</label>
       <caption>
-        <title>Insert Figure 3 caption</title>
-        <p>Insert Figure 3 caption ...</p>
+        <title>Focus on a Figure</title>
+        <p>Selecting a figure label within the text. The green highlighted camera is a quick link to view all of the figures that are referenced within the selected paragraph. The black arrow to the left of the document map is a visual cue for the reader to quickly return to the paragraph they were on if they navigate away from this to another paragraph that references Figure 5. The reader can select the figure or reference label in the resources panel (Figure 2C) to focus on the paragraphs where a specific figure is mentioned. The document map (Figure 2A) will highlight the paragraphs that reference the selected resource.</p>
       </caption>
-      <graphic xlink:href="figure_3.jpg"/>
+      <graphic xlink:href="figure_3.png"/>
     </fig>
 
     <fig id="fig4">
       <label>Figure 4.</label>
       <caption>
-        <title>Insert Figure 4 caption</title>
+        <title>Focus on a Reference</title>
         <p>Insert Figure 4 caption ...</p>
       </caption>
       <graphic xlink:href="figure_4.png"/>
