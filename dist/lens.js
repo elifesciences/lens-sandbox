@@ -25013,7 +25013,7 @@ require('./memory_store_test');
 require('./local_store_test');
 
 },{"./local_store_test":193,"./memory_store_test":194}],193:[function(require,module,exports){
-var global=self;"use strict";
+var global=typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {};"use strict";
 
 var LocalStore = require("../index").LocalStore;
 
@@ -29115,7 +29115,10 @@ LensView.prototype = new LensView.Prototype();
 module.exports = LensView;
 
 },{"substance-application":61,"substance-test":198,"substance-util":207,"underscore":212}],216:[function(require,module,exports){
-// nothing to see here... no file methods for the browser
+
+// not implemented
+// The reason for having an empty file and not throwing is to allow
+// untraditional implementation of this module.
 
 },{}]},{},[1])
 ;
