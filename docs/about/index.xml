@@ -214,8 +214,16 @@
     <title>Open Development</title>
     <p>Lens is open source software. Its codebase has a modular design and is available on <ext-link xlink:href="https://github.com/elifesciences/lens">Github</ext-link>. Lens heavily relies on <ext-link xlink:href="http://substance.io">Substance</ext-link>, an open platform for browser-based document manipulation. We'd like to invite anyone to use Lens for displaying their own content and get involved in the development process. You can report bugs and discuss features on Github or post to our <ext-link xlink:href="https://groups.google.com/forum/#!forum/elife-lens">mailing list</ext-link>. If you are a developer take a glance at the <ext-link xlink:href="http://lens.substance.io/#lens/manual">Lens Manual</ext-link>.</p>
     </sec>
-
-    <sec id="s7" sec-type="credits">
+	<sec id="s5" sec-type="growing_corpus">
+    <title>The Future of Lens</title>
+    <p>The integration to Substance, has now positioned Lens to be part of a larger publishing platform. We have enabled drag and drop functionality to Lens so that any NLM XML file can be automatically converted into the Lens format. The only caveat at the moment is that the images might not render if that publisher's definitions have not been added to Lens. We currently support <italic>eLife</italic>, <italic>Landes Biosciences</italic>, <italic>PLOS</italic>, and <italic>PeerJ</italic>. If you have a favorite open access journal that you would like to see supported, please let us know via the <ext-link xlink:href="https://github.com/elifesciences/lens/issues">Issues</ext-link>.</p>
+    <p> By encouraging authors and publishers to use and evolve open software components and a lightweight exchange format usable by web-clients, we reduce the obstacles that originate from economic competition and pave the way to true open publishing and an open exchange of information.</p> 
+	<p>With Substance, we would like to contribute an extensive content creation and annotation framework built on web infrastructure. It is designed to be customized and integrated into existing workflows.</p>
+    <p>
+    We think that research in general could also benefit from such a set of tools. We are also collaborating with the team at <ext-link xlink:href="http://fiduswriter.org/">Fidus Writer</ext-link>, since our projects share many ideas. Furthermore we would like to thank <ext-link xlink:href="http://hypothes.is/">Hypothes.is</ext-link> for advice and are looking forward to exploring further collaboration.
+    </p>
+    </sec>
+    <sec id="s6" sec-type="credits">
     <title>Credits</title>
     <p>eLife Lens was developed in collaboration between <ext-link xlink:href="http://bioegrad.berkeley.edu/">UC Berkeley</ext-link> graduate student <ext-link xlink:href="http://www.linkedin.com/pub/ivan-grubisic/26/353/739">Ivan Grubisic</ext-link> and eLife. He was supported by Michael Aufreiter from Substance, who helped with the design and implementation of the tool. Samo Korošec (<ext-link xlink:href="http://dribbble.com/froodee">froodee</ext-link>) and Ian Hamilton (ripe) gave advice on the UX/UI design. <ext-link xlink:href="http://www.grahamnott.com/">Graham Nott</ext-link> implemented the deployment workflow and eLife provided support for the project and the initial corpus of documents against which the tool was developed. <ext-link xlink:href="http://www.linkedin.com/pub/rebecca-close/4a/585/224">Rebecca Close</ext-link>, integrated Lens at <ext-link xlink:href="https://www.landesbioscience.com">Landes Bioscience</ext-link> and helped with the redesign of the converter, that now supports all NLM-compatible content.</p>
     </sec>
